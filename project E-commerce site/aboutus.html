@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css"><!--css linking-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous"><!--bootstrap linking-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/b834f53a42.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    
+        <title>DEBACLE NORTH</title>
+    </head>
+  <!--body start-->
+
+    <body>
+
+  
+<!--Header making -->
+      <div id="header1"> 
+      <div class="row"><!--creation of row for header -->
+            <div class="col-sm-2" id="logoborder" > <img id="header1logo" src="logogif.gif" alt="logo not available"></div>
+       <div class="col-sm-6" id="hideheader1and2">
+        
+        <form class="searchbox"><!--making of search box-->
+         
+          <input class="form-control" type="text" id="searchbox" placeholder="Search">
+        <button class="btn btn-primary form-control" type="submit" id="buttonsearch"><i class="fa-solid fa-magnifying-glass"></i></button> 
+</form>
+   </div>
+   <div class="col-sm-2" id="hideheader1and2">
+   
+    <ul id="cart"><li><a id="carttext" class="nav-link" href="#">
+     <button class="form-control" id="cartbutton" onclick="cart()">  <i class="cart fa fa-shopping-cart">cart</i></button> 
+        </a>
+        </li></ul>
+
+   </div>
+   <div class="col-sm-2" id="hideheader1and2">
+    <a href="login.html"><button type="button" class="form-control btn btn-primary" id="loginbutton" >Login</button>  </a>  <!--login button making -->    
+</div>
+<!--Toggle Bar making for small mobile screen less than 450px-->
+<div id="togglebar">
+ <ul class="nav nav-pills nav-justified">
+  <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-toggle="dropdown" id="dropdownbox" style="color:black; background-color: white;"><i class="fa-solid fa-bars"></i></a>
+  <ul class="dropdown-menu">
+    <li> <form class="searchbox"><!--adding search box to the toggle bar -->
+      <input class="form-control" type="text" id="searchboxintoggle" placeholder="Search">
+    <button class="btn btn-primary form-control" type="submit" id="buttonsearchintoggle"><i class="fa-solid fa-magnifying-glass"></i></button> 
+</form></li></li>
+
+    <li> <ul id="cartintoggle"><li><a href="allproduct.html" id="carttexttoggle" class="nav-link" href="#">
+       <i class="cart fa fa-shopping-cart"><button type="button" class="form-control" onclick="cartvaluemobile()">Cart</button></i><!--card image from fontawesome.com-->
+        </a>
+        </li></ul></li>
+        <!--Adding navigation bar items to the toggle bar -->
+<li> <a href="login.html"><button type="button" class="form-control btn btn-primary" id="loginbuttontoggle" >Login</button> </a>  </li>
+<li class="nav-item "><a class="nav-link active" id="anchor" href="index.html" >Home</a></li> 
+<li class="nav-item "><a class="nav-link" href="allproduct.html" >All product</a></li> 
+<li class="nav-item "><a class="nav-link"  href="women.html">Women</a> </li>
+<li class="nav-item "><a class="nav-link"  href="men.html">Men</a> </li>
+<li class="nav-item "><a class="nav-link"  href="kid.html">Kids</a> </li>
+<li class="nav-item "><a class="nav-link"  href="contactus.html">Contact us</a> </li>
+
+ </ul>
+</div>
+  </div>
+        </div>
+
+       
+        <!--Navigation Bar making -->
+        <div id="navigation" >
+        <div class="row">
+<!--This coloumn will show in Tablet mode-only-->
+          <div class="col-md-2">
+            <ul class="nav nav-pills nav-justified" id="togglebartablet">
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-toggle="dropdown" id="dropdownbox" style="color:black; background-color:rgb(248, 237, 237);"><i class="fa-solid fa-magnifying-glass"></i></a>
+              
+               <ul class="dropdown-menu">
+                <li> <form class="searchbox1"><!--adding search box to the toggle bar -->
+                  <input class="form-control" type="text" id="searchboxintoggle" placeholder="Search">
+                <button class="btn btn-primary form-control" type="submit" id="buttonsearchintoggle"><i class="fa-solid fa-magnifying-glass"></i></button> 
+          </form></li> 
+            </li>
+            
+               </ul>
+          </div>
+          <div class="col-md-8" id="headernav">
+            <ul class="nav nav-pills nav-justified">
+              <li class="nav-item "><a class="nav-link active" id="anchor" href="index.html" >Home</a></li>
+              <li class="nav-item "><a class="nav-link  " href="allproduct.html" >All product</a></li>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Women</a>
+              <ul class="dropdown-menu"><!--creating dropdown menu for the navigation items-->
+                <li><a href="allproduct.html">All products</a></li>
+                <li><a href="women.html">Dresses</a></li>
+                <li><a href="women.html">Pants</a></li>
+                <li><a href="women.html">Skirts</a></li>
+              </ul>
+              </li>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Men</a>
+                <ul class="dropdown-menu">
+                  <li><a href="allproduct.html">All products</a></li>
+                  <li><a href="men.html">Shirts</a></li>
+                  <li><a href="men.html">Pants</a></li>
+                  <li><a href="men.html">Hoodies</a></li>
+                </ul>
+                </li>
+                <li class="nav-item "><a class="nav-link" href="kid.html" >Kids</a></li>
+                <li class="nav-item "><a class="nav-link" href="contactus.html" >Contact us</a></li>
+               
+              </ul>
+            
+          </ul>
+ </div>
+          <div class="col-md-1">
+            <ul class="nav nav-pills nav-justified"  id="togglebartablet">
+              <li class="nav-item "><a class="nav-link active" id="anchor" href="login.html" >login</a></li>
+              </ul></div>
+              <div class="col-md-1">
+                <ul class="nav nav-pills nav-justified" id="togglebartablet">
+              <li class="nav-item "><a class="nav-link" href="#" ><button type="button" class="form-control" onclick="cartvaluemobile()">Cart</button></a></li></ul>
+          </div>
+
+        </div>
+      </div>
+
+       <!--FOOTER-->
+       <br>
+       <br>
+       <div class="row" style="background-color: black; color:white; ">
+       <div class="col-sm-3">
+         <ul id="ulfooter"><h6>Women</h6>
+ <li>All product</li>
+ <li>Dresses</li>
+ <li>Pants</li>
+ <li>Skirts</li></ul>
+       </div>
+       <div class="col-sm-3">
+         <ul id="ulfooter"><h6>Men</h6>
+ <li>All product</li>
+ <li>Shirts</li>
+ <li>Pants</li>
+ <li>Hoodies</li></ul>
+ 
+       </div>
+       <div class="col-sm-3">
+         <ul id="ulfooter"><h6>Kids</h6>
+ <li>All product</li>
+ <li>Shoes</li>
+ <li>Pants</li>
+ <li>Shirts</li>
+ <li>Jackets</li>
+ <li>Toys</li></ul>
+ 
+       </div>
+       <div class="col-sm-3">
+         <ul id="ulfooter"><h6>Contact us</h6>
+ <li>Address</li>
+ <li>HeadQuaters</li>
+ <li>Regional offices</li>
+ <li>Service Policy</li>
+ <li>Track Order</li>
+ <li>Our Partners</li></ul>
+ 
+       </div>
+  </div>
+  <div class="row" id="copyright">
+   <div class="col-sm-4"></div>
+   <div class="col-sm-4">&copy;copyright E-commerce  @Dobacle North 2023-24</div>
+   <div class="col-sm-4"></div>
+  </div>
+
+  <script src="code.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>     
+  </body>
+</html>

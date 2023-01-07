@@ -1,0 +1,3193 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css"><!--css linking-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous"><!--bootstrap linking-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/b834f53a42.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    
+        <title>All product</title>
+    </head>
+  <!--body start-->
+
+    <body>
+
+  
+<!--Header making -->
+      <div id="header1"> 
+      <div class="row"><!--creation of row for header -->
+            <div class="col-sm-2" id="logoborder" > <img id="header1logo" src="logogif.gif" alt="logo not available"></div>
+       <div class="col-sm-6" id="hideheader1and2">
+        
+        <form class="searchbox"><!--making of search box-->
+         
+          <input class="form-control" type="text" id="searchbox" placeholder="Search">
+        <button class="btn btn-primary form-control" type="submit" id="buttonsearch"><i class="fa-solid fa-magnifying-glass"></i></button> 
+</form>
+   </div>
+   <div class="col-sm-2" id="hideheader1and2">
+   
+    <ul id="cart"><li><a id="carttext" class="nav-link" href="#">
+     <button class="form-control" id="cartbutton" onclick="cart()">  <i class="cart fa fa-shopping-cart">cart</i></button> 
+        </a>
+        </li></ul>
+
+   </div>
+   <div class="col-sm-2" id="hideheader1and2">
+    <a href="login.html"><button type="button" class="form-control btn btn-primary" id="loginbutton" >Login</button>  </a>  <!--login button making -->    
+</div>
+<!--Toggle Bar making for small mobile screen less than 450px-->
+<div id="togglebar">
+ <ul class="nav nav-pills nav-justified">
+  <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-toggle="dropdown" id="dropdownbox" style="color:black; background-color: white;"><i class="fa-solid fa-bars"></i></a>
+  <ul class="dropdown-menu">
+    <li> <form class="searchbox"><!--adding search box to the toggle bar -->
+      <input class="form-control" type="text" id="searchboxintoggle" placeholder="Search">
+    <button class="btn btn-primary form-control" type="submit" id="buttonsearchintoggle"><i class="fa-solid fa-magnifying-glass"></i></button> 
+</form></li></li>
+
+    <li> <ul id="cartintoggle"><li><a href="allproduct.html" id="carttexttoggle" class="nav-link" href="#">
+       <i class="cart fa fa-shopping-cart"><button type="button" class="form-control" onclick="cartvaluemobile()">Cart</button></i><!--card image from fontawesome.com-->
+        </a>
+        </li></ul></li>
+        <!--Adding navigation bar items to the toggle bar -->
+<li> <a href="login.html"><button type="button" class="form-control btn btn-primary" id="loginbuttontoggle" >Login</button> </a>  </li>
+<li class="nav-item "><a class="nav-link" href="index.html" >Home</a></li> 
+<li class="nav-item "><a class="nav-link active" id="anchor"  href="allproduct.html" >All product</a></li> 
+<li class="nav-item "><a class="nav-link"  href="women.html">Women</a> </li>
+<li class="nav-item "><a class="nav-link"  href="men.html">Men</a> </li>
+<li class="nav-item "><a class="nav-link"  href="kid.html">Kids</a> </li>
+<li class="nav-item "><a class="nav-link"  href="contactus.html">Contact us</a> </li>
+
+ </ul>
+</div>
+  </div>
+        </div>
+
+       
+        <!--Navigation Bar making -->
+        <div id="navigation" >
+        <div class="row">
+<!--This coloumn will show in Tablet mode-only-->
+          <div class="col-md-2">
+            <ul class="nav nav-pills nav-justified" id="togglebartablet">
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-toggle="dropdown" id="dropdownbox" style="color:black; background-color:rgb(248, 237, 237);"><i class="fa-solid fa-magnifying-glass"></i></a>
+              
+               <ul class="dropdown-menu">
+                <li> <form class="searchbox1"><!--adding search box to the toggle bar -->
+                  <input class="form-control" type="text" id="searchboxintoggle" placeholder="Search">
+                <button class="btn btn-primary form-control" type="submit" id="buttonsearchintoggle"><i class="fa-solid fa-magnifying-glass"></i></button> 
+          </form></li> 
+            </li>
+            
+               </ul>
+          </div>
+          <div class="col-md-8" id="headernav">
+            <ul class="nav nav-pills nav-justified">
+              <li class="nav-item "><a class="nav-link" href="index.html" >Home</a></li>
+              <li class="nav-item "><a class="nav-link active" id="anchor" href="allproduct.html" >All product</a></li>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Women</a>
+              <ul class="dropdown-menu"><!--creating dropdown menu for the navigation items-->
+                <li><a class="nav-link active" id="anchor" href="allproduct.html">All products</a></li>
+                <li><a class="nav-link " href="women.html">Dresses</a></li>
+                <li><a class="nav-link " href="women.html">Pants</a></li>
+                <li><a class="nav-link " href="women.html">Skirts</a></li>
+              </ul>
+              </li>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Men</a>
+                <ul class="dropdown-menu">
+                  <li><a class="nav-link active" id="anchor" href="allproduct.html">All products</a></li>
+                  <li><a class="nav-link " href="men.html">Shirts</a></li>
+                  <li><a class="nav-link " href="men.html">Pants</a></li>
+                  <li><a class="nav-link " href="men.html">Hoodies</a></li>
+                </ul>
+                </li>
+                <li class="nav-item "><a class="nav-link" href="kid.html" >Kids</a></li>
+                <li class="nav-item "><a class="nav-link" href="contactus.html" >Contact us</a></li>
+               
+              </ul>
+            
+          </ul>
+ </div>
+          <div class="col-md-1">
+            <ul class="nav nav-pills nav-justified"  id="togglebartablet">
+              <li class="nav-item "><a class="nav-link active" id="anchor" href="login.html" >login</a></li>
+              </ul></div>
+              <div class="col-md-1">
+                <ul class="nav nav-pills nav-justified" id="togglebartablet">
+              <li class="nav-item "><a class="nav-link" href="#" ><button type="button" class="form-control" onclick="cartvaluemobile()">Cart</button></a></li></ul>
+          </div>
+
+        </div>
+      </div>
+
+
+         <!--sponser box for mobile -->
+   <!--Here sponser box is specialy ctreated for the mobilescreens 
+       This will be hidden on the full screen through Display attribute of the CSS-->
+  <br>
+  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false">
+   <div class="carousel-inner" style="background-color:white; float:right;" id="sponsermobile">
+     <div class="carousel-item active">
+       <div class="row" >
+         <div class="col-sm-12">
+          <div class="sponsoredlogo" >
+         <img  src="newarrival.png" style="width:100%;">
+         <button type="button" id="buttonarrival" class="form-control"  >SHOP NOW</button>
+         </div>
+         </div>
+     </div>
+     </div>
+     
+   </div>
+  
+ </div>
+<!--cards for sponser box in mobile version-->
+
+<div id="sponserboxcards">
+ <div class="row">
+   <div class="col">
+     <div class="card" style="width:160px;height:280px; margin-top: 10px; margin-left:20px;" id="cardbox" >
+       <img class="card-img-top" id="cardimg2" style="height:180px" src="https://img3.junaroad.com/uiproducts/18876461/zoom_0-1671115271.jpg" alt="image not available">
+       <div class="card-body">
+       
+         <p class="card-text" style="text-align:center;color:black;
+         text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+         <a href="#"><button class="btn btn-primary" onclick="cartvaluemobile()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+      </div>
+       </div>
+   </div>
+   <div class="col">
+     <div class="card" style="width:160px;height:280px; margin-top: 10px; margin-left:5px;" id="cardbox" >
+       <img class="card-img-top" id="cardimg2" style="height:180px" src="https://img3.junaroad.com/uiproducts/18734534/zoom_0-1669691422.jpg" alt="image not available">
+       <div class="card-body">
+       
+         <p class="card-text" style="text-align:center;color:black;
+         text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+         <a href="#"><button class="btn btn-primary" onclick="cartvaluemobile()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+      </div>
+       </div>
+   </div>
+ </div>
+
+ <div class="row">
+   <div class="col">
+     <div class="card" style="width:160px;height:280px; margin-top: 10px; margin-left:20px;" id="cardbox" >
+       <img class="card-img-top" id="cardimg2" style="height:180px" src="https://img3.junaroad.com/uiproducts/18735503/zoom_0-1669822827.jpg" alt="image not available">
+       <div class="card-body">
+       
+         <p class="card-text" style="text-align:center;color:black;
+         text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+         <a href="#"><button class="btn btn-primary" onclick="cartvaluemobile()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+      </div>
+       </div>
+   </div>
+   <div class="col">
+     <div class="card" style="width:160px;height:280px; margin-top: 10px; margin-left:5px;" id="cardbox" >
+       <img class="card-img-top" id="cardimg2" style="height:180px" src="https://img3.junaroad.com/uiproducts/18886635/zoom_0-1671285690.jpg" alt="image not available">
+       <div class="card-body">
+       
+         <p class="card-text" style="text-align:center;color:black;
+         text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+         <a href="#"><button class="btn btn-primary" onclick="cartvaluemobile()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+      </div>
+       </div>
+   </div>
+ </div>
+
+
+</div>
+   <!--sponser box for mobile -->
+   <!--Here sponser box is specialy ctreated for the mobilescreens 
+       This will be hidden on the full screen through Display attribute of the CSS-->
+       <br>
+       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false">
+        <div class="carousel-inner" style="background-color:white; float:right;" id="sponsermobile">
+          <div class="carousel-item active">
+            <div class="row" >
+              <div class="col-sm-12">
+               <div class="sponsoredlogo" >
+              <img  src="newarrival.png" style="width:100%;">
+              <button type="button" id="buttonarrival" class="form-control"  >SHOP NOW</button>
+              </div>
+              </div>
+          </div>
+          </div>
+          
+        </div>
+       
+      </div>
+     <!--cards for sponser box in mobile version-->
+    
+     <div id="sponserboxcards">
+      <div class="row">
+        <div class="col">
+          <div class="card" style="width:160px;height:280px; margin-top: 10px; margin-left:20px;" id="cardbox" >
+            <img class="card-img-top" id="cardimg2" style="height:180px" src="https://img3.junaroad.com/uiproducts/18876461/zoom_0-1671115271.jpg" alt="image not available">
+            <div class="card-body">
+            
+              <p class="card-text" style="text-align:center;color:black;
+              text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+              <a href="#"><button class="btn btn-primary" onclick="cartvaluemobile()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+           </div>
+            </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width:160px;height:280px; margin-top: 10px; margin-left:5px;" id="cardbox" >
+            <img class="card-img-top" id="cardimg2" style="height:180px" src="https://img3.junaroad.com/uiproducts/18734534/zoom_0-1669691422.jpg" alt="image not available">
+            <div class="card-body">
+            
+              <p class="card-text" style="text-align:center;color:black;
+              text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+              <a href="#"><button class="btn btn-primary" onclick="cartvaluemobile()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+           </div>
+            </div>
+        </div>
+      </div>
+    
+      <div class="row">
+        <div class="col">
+          <div class="card" style="width:160px;height:280px; margin-top: 10px; margin-left:20px;" id="cardbox" >
+            <img class="card-img-top" id="cardimg2" style="height:180px" src="https://img3.junaroad.com/uiproducts/18735503/zoom_0-1669822827.jpg" alt="image not available">
+            <div class="card-body">
+            
+              <p class="card-text" style="text-align:center;color:black;
+              text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+              <a href="#"><button class="btn btn-primary" onclick="cartvaluemobile()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+           </div>
+            </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width:160px;height:280px; margin-top: 10px; margin-left:5px;" id="cardbox" >
+            <img class="card-img-top" id="cardimg2" style="height:180px" src="https://img3.junaroad.com/uiproducts/18886635/zoom_0-1671285690.jpg" alt="image not available">
+            <div class="card-body">
+            
+              <p class="card-text" style="text-align:center;color:black;
+              text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+              <a href="#"><button class="btn btn-primary" onclick="cartvaluemobile()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+           </div>
+            </div>
+        </div>
+      </div>
+    
+    
+     </div>
+    
+<!--featured product for the tablet -->
+
+
+<!--to craeate featured products section:
+    step 1: code taken from the bootstrap(carousel)
+    step 2: created rows in place of the images  .
+    step 3: created coloumns inside the rows .
+    step 4: each row have some cards in it 
+    step 5: cards are styled tghrough CSS-->
+
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" id="featuredboxtablet"  >
+      <div class="carousel-inner" id="featuredboxtablet">
+        <div class="carousel-item active">
+          <div class="row" style="width:100%;margin-top: 10px;">
+
+            <div class="col-sm-1"></div>
+            
+            <div class="col-sm-2"><!--adding cards in the coloumns of the rows -->
+            <div class="card" style="width:200px;" id="cardbox" >
+              <img class="card-img-top" id="cardimg" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+              <div class="card-body">
+                <p class="card-title" id="carttitle" style="text-align:center;"><b>Luckhnovi Kurta</b></p>
+                <p class="card-text" style="text-align:center;">Flat 50% off</p>
+                <a href=""><button class="btn btn-primary" onclick="cartvaluemobile()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+             </div>
+              </div>
+
+            </div>
+
+            <div class="col-sm-2" style="margin-left:210px;"><!--adding cards in the coloumns of the rows -->
+              <div class="card" style="width:200px;" id="cardbox" >
+                <img class="card-img-top" id="cardimg" src="https://img3.junaroad.com/uiproducts/18289478/zoom_0-1648621739.jpg">
+                <div class="card-body">
+                  <p class="card-title" id="carttitle" style="text-align:center;"><b>Luckhnovi Kurta</b></p>
+                  <p class="card-text" style="text-align:center;">Flat 50% off</p>
+                  <a href="#"><button class="btn btn-primary" onclick="cartvaluemobile()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+               </div>
+                </div>
+                
+              </div>
+
+           
+
+                
+
+                 
+
+          </div>
+        </div>
+       
+        <div class="carousel-item">
+          <div class="row" style="width:100%;margin-top: 10px;">
+
+            <div class="col-sm-1"></div>
+            
+            <div class="col-sm-2">
+            <div class="card" style="width:200px;" id="cardbox" ><!--adding cards in the coloumns of the rows -->
+              <img class="card-img-top" id="cardimg" src="https://img3.junaroad.com/uiproducts/18876169/zoom_0-1671118745.jpg" alt="image not available">
+              <div class="card-body">
+                <p class="card-title" id="carttitle" style="text-align:center;"><b>Men Kurta</b></p>
+                <p class="card-text" style="text-align:center;">Flat 50% off</p>
+                <a href="#"><button class="btn btn-primary" onclick="cartvaluemobile()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+             </div>
+              </div>
+
+            </div>
+
+            <div class="col-sm-2" style="margin-left:210px;">
+              <div class="card" style="width:200px;" id="cardbox" ><!--adding cards in the coloumns of the rows -->
+                <img class="card-img-top" id="cardimg" src="https://img3.junaroad.com/uiproducts/18474105/zoom_0-1661592672.jpg" alt="image not available">
+                <div class="card-body">
+                  <p class="card-title" id="carttitle" style="text-align:center;"><b>men shirt</b></p>
+                  <p class="card-text" style="text-align:center;">Flat 50% off</p>
+                  <a href="#"><button class="btn btn-primary" onclick="cartvaluemobile()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+               </div>
+                </div>
+                
+              </div>
+
+             
+
+               
+
+                 
+
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row" style="width:100%;margin-top: 10px;">
+
+            <div class="col-sm-1"></div>
+            
+            <div class="col-sm-2"><!--adding cards in the coloumns of the rows -->
+            <div class="card" style="width:200px;" id="cardbox" >
+              <img class="card-img-top" id="cardimg" src="https://img3.junaroad.com/uiproducts/18445072/zoom_0-1658736348.jpg" alt="image not available">
+              <div class="card-body">
+                <p class="card-title" id="carttitle" style="text-align:center;"><b>Froks</b></p>
+                <p class="card-text" style="text-align:center;">Flat 50% off</p>
+                <a href="#"><button class="btn btn-primary" onclick="cartvaluemobile()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+             </div>
+              </div>
+
+            </div>
+
+            <div class="col-sm-2"  style="margin-left:210px;"><!--adding cards in the coloumns of the rows -->
+              <div class="card" style="width:200px;" id="cardbox" >
+                <img class="card-img-top" id="cardimg" src="https://img3.junaroad.com/uiproducts/18649460/zoom_1-1668003469.jpg" alt="image not available">
+                <div class="card-body">
+                  <p class="card-title" id="carttitle" style="text-align:center;"><b>Kids shirt</b></p>
+                  <p class="card-text" style="text-align:center;">Flat 50% off</p>
+                  <a href="#"><button class="btn btn-primary" onclick="cartvaluemobile()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+               </div>
+                </div>
+                
+              </div>
+
+              
+
+                
+
+              
+
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" id="featuredboxtablet" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" id="featuredboxtablet" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <!--end of third featured slide-->
+    <div class="row" id="navigation2" style="width:101.5%;text-align: center;">
+        <div class="col-sm-2"><h1></h1></div>
+        <div class="col-sm-8"><h1><p style="font-family: Georgia;"> All Product Section </p> </h1></div>
+        <div class="col-sm-2"><h1></h1></div>
+      </div>
+  
+
+<!--The sponsored products -->
+
+<div id="newarrivaldivbox">
+<div class="row" >
+
+  <!--This the sponserd block cantaining a row with two coloumns 
+      1st coloumn : contain the picture 
+       2nd coloumn: contain the cards positioned through the rows and and cloumn method-->
+  <div class="col-sm-4">
+   <div class="sponsoredlogo" style="width:400px;height:300px; background-color:blue;margin-left: 10px;border:1px solid black;box-shadow: 10px 10px 18px #888888;">
+  <img src="newarrival.png" style="width:400px;height:300px;">
+  <button type="button" id="buttonarrival" class="form-control" style="position:absolute; margin-top:-50px; text-align: center;width:400px;border:1px solid purple" >SHOP NOW</button>
+  </div>
+  </div>
+
+  <div class="col-sm-8">
+    <div class="sponsored" style="height:300px;background-color:white;margin-left: -50px; border:1px solid black;box-shadow: 10px 10px 18px #888888;">
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false" >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-sm-1"></div>
+
+              <div class="col-sm-2"><!--creating a cart -->
+                <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                  <img class="card-img-top" id="cardimg2" style="height:180px" src="https://img3.junaroad.com/uiproducts/18607420/zoom_0-1666437297.jpg">
+                  <div class="card-body">
+                  
+                    <p class="card-text" style="text-align:center;color:black;
+                    text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                    <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                 </div>
+                  </div>
+              </div>
+
+              <div class="col-sm-2"><!--creating a cart -->
+                <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                  <img class="card-img-top" id="cardimg2" style="height:180px" src="https://img3.junaroad.com/uiproducts/18391950/zoom_0-1654073675.jpg" alt="image not available">
+                  <div class="card-body">
+                  
+                    <p class="card-text" style="text-align:center;color:black;
+                    text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                    <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                 </div>
+                  </div>
+              </div>
+
+              <div class="col-sm-2"><!--creating a cart -->
+                <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                  <img class="card-img-top" id="cardimg2" style="height:180px" src="https://img3.junaroad.com/uiproducts/17727079/zoom_0-1620474411.jpg" alt="image not available">
+                  <div class="card-body">
+                  
+                    <p class="card-text" style="text-align:center;color:black;
+                    text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                    <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                 </div>
+                  </div>
+              </div>
+
+              <div class="col-sm-2"><!--creating a cart -->
+                <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                  <img class="card-img-top" id="cardimg2" style="height:180px" src="https://img3.junaroad.com/uiproducts/18334849/zoom_0-1650017033.jpg" alt="image not available">
+                  <div class="card-body">
+                  
+                    <p class="card-text" style="text-align:center;color:black;
+                    text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                    <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                 </div>
+                  </div>
+              </div>
+
+              <div class="col-sm-2"><!--creating a cart -->
+                <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                  <img class="card-img-top" id="cardimg2" style="height:180px" src="https://img3.junaroad.com/uiproducts/18479884/zoom_0-1661495722.jpg" alt="image not available">
+                  <div class="card-body">
+                  
+                    <p class="card-text" style="text-align:center;color:black;
+                    text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                    <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                 </div>
+                  </div>
+              </div>
+
+
+
+
+              <div class="col-sm-1"></div>
+            </div>
+          </div>
+          <!--first slide of sponsored div 
+end here-->
+          <div class="carousel-item">
+
+
+            <div class="row" >
+              <div class="col-sm-1"></div>
+
+              <div class="col-sm-2"><!--creating a cart -->
+                <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                  <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                  <div class="card-body">
+                  
+                    <p class="card-text" style="text-align:center;color:black;
+                    text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                    <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                 </div>
+                  </div>
+              </div>
+
+              <div class="col-sm-2"><!--creating a cart -->
+                <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                  <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                  <div class="card-body">
+                  
+                    <p class="card-text" style="text-align:center;color:black;
+                    text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                    <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                 </div>
+                  </div>
+              </div>
+
+              <div class="col-sm-2"><!--creating a cart -->
+                <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                  <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                  <div class="card-body">
+                  
+                    <p class="card-text" style="text-align:center;color:black;
+                    text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                    <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                 </div>
+                  </div>
+              </div>
+
+              <div class="col-sm-2"><!--creating a cart -->
+                <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                  <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                  <div class="card-body">
+                  
+                    <p class="card-text" style="text-align:center;color:black;
+                    text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                    <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                 </div>
+                  </div>
+              </div>
+
+              <div class="col-sm-2"><!--creating a cart -->
+                <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                  <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                  <div class="card-body">
+                  
+                    <p class="card-text" style="text-align:center;color:black;
+                    text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                    <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                 </div>
+                  </div>
+              </div>
+
+
+
+
+              <div class="col-sm-1"></div>
+            </div>
+
+
+          </div>
+          <div class="carousel-item">
+
+
+            <div class="row">
+              <div class="col-sm-1"></div>
+
+              <div class="col-sm-2"><!--creating a cart -->
+                <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                  <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                  <div class="card-body">
+                  
+                    <p class="card-text" style="text-align:center;color:black;
+                    text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                    <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                 </div>
+                  </div>
+              </div>
+
+              <div class="col-sm-2"><!--creating a cart -->
+                <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                  <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                  <div class="card-body">
+                  
+                    <p class="card-text" style="text-align:center;color:black;
+                    text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                    <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                 </div>
+                  </div>
+              </div>
+
+              <div class="col-sm-2"><!--creating a cart -->
+                <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                  <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                  <div class="card-body">
+                  
+                    <p class="card-text" style="text-align:center;color:black;
+                    text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                    <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                 </div>
+                  </div>
+              </div>
+
+              <div class="col-sm-2"><!--creating a cart -->
+                <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                  <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                  <div class="card-body">
+                  
+                    <p class="card-text" style="text-align:center;color:black;
+                    text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                    <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                 </div>
+                  </div>
+              </div>
+
+              <div class="col-sm-2"><!--creating a cart -->
+                <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                  <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                  <div class="card-body">
+                  
+                    <p class="card-text" style="text-align:center;color:black;
+                    text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                    <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                 </div>
+                  </div>
+              </div>
+
+
+
+
+              <div class="col-sm-1"></div>
+            </div>
+
+
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" id="prevnewarrival"  aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" id="nextnewarrival"  aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!--sponserd devison End here-->
+<div class="row" id="navigation2" style="width:101.5%;text-align: center;">
+  <div class="col-sm-2"><h1></h1></div>
+  <div class="col-sm-8"><h1>..</h1></div>
+  <div class="col-sm-2"><h1></h1></div>
+</div>
+<!--mens trending devision start here-->
+<!--creating another devision just like sponserd devision to show mens trending -->
+<div id="newarrivaldivbox">
+    <div class="row" >
+      <div class="col-sm-4">
+       <div class="sponsoredlogo" style="width:400px;height:300px; background-color:blue;margin-left: 10px;border:1px solid black;box-shadow: 10px 10px 18px #888888;">
+      <img src="mentrending.png" style="width:400px;height:300px;">
+      <button type="button" id="buttonarrival" class="form-control" style="position:absolute; margin-top:-50px; text-align: center;width:400px;border:1px solid purple" >SHOP NOW</button>
+      </div>
+      </div>
+    
+      <div class="col-sm-8">
+        <div class="sponsored" style="height:300px;background-color: white;margin-left: -50px; border:1px solid black;box-shadow: 10px 10px 18px #888888;">
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false" >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row">
+                  <div class="col-sm-1"></div>
+    
+                  <div class="col-sm-2"><!--creating the cart -->
+                    <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                      <img class="card-img-top" id="cardimg2" style="height:180px" src="https://img3.junaroad.com/uiproducts/18330655/zoom_0-1649845688.jpg" alt="image not available">
+                      <div class="card-body">
+                      
+                        <p class="card-text" style="text-align:center;color:black;
+                        text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                        <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                     </div>
+                      </div>
+                  </div>
+    
+                  <div class="col-sm-2"><!--creating the cart -->
+                    <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                      <img class="card-img-top" id="cardimg2" style="height:180px" src="https://img3.junaroad.com/uiproducts/17936658/zoom_0-1629552826.jpg" alt="image not available">
+                      <div class="card-body">
+                      
+                        <p class="card-text" style="text-align:center;color:black;
+                        text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                        <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                     </div>
+                      </div>
+                  </div>
+    
+                  <div class="col-sm-2"><!--creating the cart -->
+                    <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                      <img class="card-img-top" id="cardimg2" style="height:180px" src="https://img3.junaroad.com/uiproducts/18375992/zoom_0-1652880131.jpg" alt="image not available">
+                      <div class="card-body">
+                      
+                        <p class="card-text" style="text-align:center;color:black;
+                        text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                        <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                     </div>
+                      </div>
+                  </div>
+    
+                  <div class="col-sm-2"><!--creating the cart -->
+                    <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                      <img class="card-img-top" id="cardimg2" style="height:180px" src="https://img3.junaroad.com/uiproducts/16980160/zoom_1-1583318859.jpg" alt="image not available">
+                      <div class="card-body">
+                      
+                        <p class="card-text" style="text-align:center;color:black;
+                        text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                        <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                     </div>
+                      </div>
+                  </div>
+    
+                  <div class="col-sm-2"><!--creating the cart -->
+                    <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                      <img class="card-img-top" id="cardimg2" style="height:180px" src="https://img3.junaroad.com/uiproducts/18476004/zoom_1-1661266965.jpg" alt="image not available">
+                      <div class="card-body">
+                      
+                        <p class="card-text" style="text-align:center;color:black;
+                        text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                        <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                     </div>
+                      </div>
+                  </div>
+    
+    
+    
+    
+                  <div class="col-sm-1"></div>
+                </div>
+              </div>
+              <!--first slide of sponsored div 
+    end here-->
+              <div class="carousel-item">
+    
+    
+                <div class="row" >
+                  <div class="col-sm-1"></div>
+    
+                  <div class="col-sm-2"><!--creating the cart -->
+                    <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                      <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                      <div class="card-body">
+                      
+                        <p class="card-text" style="text-align:center;color:black;
+                        text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                        <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                     </div>
+                      </div>
+                  </div>
+    
+                  <div class="col-sm-2"><!--creating the cart -->
+                    <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                      <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                      <div class="card-body">
+                      
+                        <p class="card-text" style="text-align:center;color:black;
+                        text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                        <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                     </div>
+                      </div>
+                  </div>
+    
+                  <div class="col-sm-2"><!--creating the cart -->
+                    <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                      <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                      <div class="card-body">
+                      
+                        <p class="card-text" style="text-align:center;color:black;
+                        text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                        <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                     </div>
+                      </div>
+                  </div>
+    
+                  <div class="col-sm-2"><!--creating the cart -->
+                    <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                      <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                      <div class="card-body">
+                      
+                        <p class="card-text" style="text-align:center;color:black;
+                        text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                        <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                     </div>
+                      </div>
+                  </div>
+    
+                  <div class="col-sm-2"><!--creating the cart -->
+                    <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                      <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                      <div class="card-body">
+                      
+                        <p class="card-text" style="text-align:center;color:black;
+                        text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                        <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                     </div>
+                      </div>
+                  </div>
+    
+    
+    
+    
+                  <div class="col-sm-1"></div>
+                </div>
+    
+    
+              </div>
+              <div class="carousel-item">
+    
+    
+                <div class="row">
+                  <div class="col-sm-1"></div>
+    
+                  <div class="col-sm-2"><!--creating the cart -->
+                    <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                      <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                      <div class="card-body">
+                      
+                        <p class="card-text" style="text-align:center;color:black;
+                        text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                        <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                     </div>
+                      </div>
+                  </div>
+    
+                  <div class="col-sm-2"><!--creating the cart -->
+                    <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                      <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                      <div class="card-body">
+                      
+                        <p class="card-text" style="text-align:center;color:black;
+                        text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                        <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                     </div>
+                      </div>
+                  </div>
+    
+                  <div class="col-sm-2"><!--creating the cart -->
+                    <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                      <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                      <div class="card-body">
+                      
+                        <p class="card-text" style="text-align:center;color:black;
+                        text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                        <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                     </div>
+                      </div>
+                  </div>
+    
+                  <div class="col-sm-2"><!--creating the cart -->
+                    <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                      <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                      <div class="card-body">
+                      
+                        <p class="card-text" style="text-align:center;color:black;
+                        text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                        <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                     </div>
+                      </div>
+                  </div>
+    
+                  <div class="col-sm-2"><!--creating the cart -->
+                    <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                      <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                      <div class="card-body">
+                      
+                        <p class="card-text" style="text-align:center;color:black;
+                        text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                        <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                     </div>
+                      </div>
+                  </div>
+    
+    
+    
+    
+                  <div class="col-sm-1"></div>
+                </div>
+    
+    
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" id="prevnewarrival"  aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" id="nextnewarrival"  aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <!--menstrending devision end here -->
+    
+    <div class="row" id="navigation2" style="width:101.5%;text-align: center;">
+      <div class="col-sm-2"><h1></h1></div>
+      <div class="col-sm-8"><h1>..</h1></div>
+      <div class="col-sm-2"><h1></h1></div>
+    </div>
+    <!--slideshow inbetween start here -->
+    
+    <!--this is inberween cart for the slide show
+     code: taken from the bootstrap -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" id="inbetweenslide">
+      <ol class="carousel-indicators" id="inbetweenslide" >
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <!--now we are adding the images in the slide show -->
+      <div class="carousel-inner" id="inbetweenslide" >
+        <div class="carousel-item active">
+          <div class="row" style="width:100%;margin-top: 10px;">
+    
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10">
+            <img class="d-block w-100" src="https://www.seoclerk.com/pics/000/956/122/08ef29db9e01b139edf3b94e6c048dd3.jpg" alt="First slide">
+            </div>
+        </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row" style="width:100%;margin-top: 10px;">
+    
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10">
+            <img class="d-block w-100" src="https://www.seoclerk.com/pics/000/956/122/08ef29db9e01b139edf3b94e6c048dd3.jpg" alt="First slide">
+            </div>
+        </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row" style="width:100%;margin-top: 10px;">
+    
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10">
+            <img class="d-block w-100" src="https://www.seoclerk.com/pics/000/956/122/08ef29db9e01b139edf3b94e6c048dd3.jpg" alt="First slide">
+            </div>
+        </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" id="inbetweenslide" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" id="prev" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" id="inbetweenslide" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" id="next" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <!--end of third featured slide-->
+    <div class="row" id="navigation2" style="width:101.5%;text-align: center;">
+      <div class="col-sm-2"><h1></h1></div>
+      <div class="col-sm-8"><h1>..</h1></div>
+      <div class="col-sm-2"><h1></h1></div>
+    </div>
+    
+    
+    <!--slideshow inbetween end here-->
+    
+    <!--women trending start here -->
+    
+    <br>
+    <div id="newarrivaldivbox">
+      <div class="row" >
+        <div class="col-sm-4">
+         <div class="sponsoredlogo" style="width:400px;height:300px; background-color:blue;margin-left: 10px;border:1px solid black;box-shadow: 10px 10px 18px #888888;">
+        <img src="womentrending.png" style="width:400px;height:300px;">
+        <button type="button" id="buttonarrival" class="form-control" style="position:absolute; margin-top:-50px; text-align: center;width:400px;border:1px solid purple" >SHOP NOW</button>
+        </div>
+        </div>
+      
+        <div class="col-sm-8">
+          <div class="sponsored" style="height:300px;background-color: white;margin-left: -50px; border:1px solid black;box-shadow: 10px 10px 18px #888888;">
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false" >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="row">
+                    <div class="col-sm-1"></div>
+      
+                    <div class="col-sm-2"><!--creating the cards for the devision-->
+                      <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                        <img class="card-img-top" id="cardimg2" style="height:180px" src="https://img3.junaroad.com/uiproducts/18343427/zoom_0-1650715888.jpg" alt="image not available">
+                        <div class="card-body">
+                        
+                          <p class="card-text" style="text-align:center;color:black;
+                          text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                          <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                       </div>
+                        </div>
+                    </div>
+      
+                    <div class="col-sm-2"><!--creating the cards for the devision-->
+                      <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                        <img class="card-img-top" id="cardimg2" style="height:180px" src="https://img3.junaroad.com/uiproducts/18473375/zoom_0-1661350765.jpg" alt="image not available">
+                        <div class="card-body">
+                        
+                          <p class="card-text" style="text-align:center;color:black;
+                          text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                          <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                       </div>
+                        </div>
+                    </div>
+      
+                    <div class="col-sm-2"><!--creating the cards for the devision-->
+                      <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                        <img class="card-img-top" id="cardimg2" style="height:180px" src="https://img3.junaroad.com/uiproducts/17921424/zoom_0-1628852962.jpg" alt="image not available">
+                        <div class="card-body">
+                        
+                          <p class="card-text" style="text-align:center;color:black;
+                          text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                          <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                       </div>
+                        </div>
+                    </div>
+      
+                    <div class="col-sm-2"><!--creating the cards for the devision-->
+                      <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                        <img class="card-img-top" id="cardimg2" style="height:180px" src="https://img3.junaroad.com/uiproducts/18402847/zoom_0-1655220533.jpg" alt="image not available">
+                        <div class="card-body">
+                        
+                          <p class="card-text" style="text-align:center;color:black;
+                          text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                          <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                       </div>
+                        </div>
+                    </div>
+      
+                    <div class="col-sm-2"><!--creating the cards for the devision-->
+                      <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                        <img class="card-img-top" id="cardimg2" style="height:180px" src="https://img3.junaroad.com/uiproducts/18343428/zoom_0-1650715888.jpg" alt="image not available">
+                        <div class="card-body">
+                        
+                          <p class="card-text" style="text-align:center;color:black;
+                          text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                          <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                       </div>
+                        </div>
+                    </div>
+      
+      
+      
+      
+                    <div class="col-sm-1"></div>
+                  </div>
+                </div>
+                <!--first slide of sponsored div 
+      end here-->
+                <div class="carousel-item">
+      
+      
+                  <div class="row" >
+                    <div class="col-sm-1"></div>
+      
+                    <div class="col-sm-2"><!--creating the cards for the devision-->
+                      <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                        <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                        <div class="card-body">
+                        
+                          <p class="card-text" style="text-align:center;color:black;
+                          text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                          <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                       </div>
+                        </div>
+                    </div>
+      
+                    <div class="col-sm-2"><!--creating the cards for the devision-->
+                      <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                        <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                        <div class="card-body">
+                        
+                          <p class="card-text" style="text-align:center;color:black;
+                          text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                          <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                       </div>
+                        </div>
+                    </div>
+      
+                    <div class="col-sm-2"><!--creating the cards for the devision-->
+                      <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                        <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                        <div class="card-body">
+                        
+                          <p class="card-text" style="text-align:center;color:black;
+                          text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                          <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                       </div>
+                        </div>
+                    </div>
+      
+                    <div class="col-sm-2"><!--creating the cards for the devision-->
+                      <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                        <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                        <div class="card-body">
+                        
+                          <p class="card-text" style="text-align:center;color:black;
+                          text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                          <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                       </div>
+                        </div>
+                    </div>
+      
+                    <div class="col-sm-2"><!--creating the cards for the devision-->
+                      <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                        <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                        <div class="card-body">
+                        
+                          <p class="card-text" style="text-align:center;color:black;
+                          text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                          <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                       </div>
+                        </div>
+                    </div>
+      
+      
+      
+      
+                    <div class="col-sm-1"></div>
+                  </div>
+      
+      
+                </div>
+                <div class="carousel-item">
+      
+      
+                  <div class="row">
+                    <div class="col-sm-1"></div>
+      
+                    <div class="col-sm-2"><!--creating the cards for the devision-->
+                      <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                        <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                        <div class="card-body">
+                        
+                          <p class="card-text" style="text-align:center;color:black;
+                          text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                          <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                       </div>
+                        </div>
+                    </div>
+      
+                    <div class="col-sm-2"><!--creating the cards for the devision-->
+                      <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                        <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                        <div class="card-body">
+                        
+                          <p class="card-text" style="text-align:center;color:black;
+                          text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                          <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                       </div>
+                        </div>
+                    </div>
+      
+                    <div class="col-sm-2"><!--creating the cards for the devision-->
+                      <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                        <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                        <div class="card-body">
+                        
+                          <p class="card-text" style="text-align:center;color:black;
+                          text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                          <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                       </div>
+                        </div>
+                    </div>
+      
+                    <div class="col-sm-2"><!--creating the cards for the devision-->
+                      <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                        <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                        <div class="card-body">
+                        
+                          <p class="card-text" style="text-align:center;color:black;
+                          text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                          <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                       </div>
+                        </div>
+                    </div>
+      
+                    <div class="col-sm-2"><!--creating the cards for the devision-->
+                      <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                        <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                        <div class="card-body">
+                        
+                          <p class="card-text" style="text-align:center;color:black;
+                          text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                          <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                       </div>
+                        </div>
+                    </div>
+      
+      
+      
+      
+                    <div class="col-sm-1"></div>
+                  </div>
+      
+      
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" id="prevnewarrival"  aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" id="nextnewarrival"  aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    
+      <!--women trending slide end here -->
+ <!--Featured product section (crausel used)-->
+
+<!--to craeate featured products section:
+    step 1: code taken from the bootstrap(carousel)
+    step 2: created rows in place of the images  .
+    step 3: created coloumns inside the rows .
+    step 4: each row have some cards in it 
+    step 5: cards are styled tghrough CSS-->
+
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel"  >
+        <div class="carousel-inner" id="featuredbox">
+          <div class="carousel-item active">
+            <div class="row" style="width:100%;margin-top: 10px;">
+
+              <div class="col-sm-1"></div>
+              
+              <div class="col-sm-2"><!--adding cards in the coloumns of the rows -->
+              <div class="card" style="width:200px;" id="cardbox" >
+                <img class="card-img-top" id="cardimg" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                <div class="card-body">
+                  <p class="card-title" id="carttitle" style="text-align:center;"><b>Luckhnovi Kurta</b></p>
+                  <p class="card-text" style="text-align:center;">Flat 50% off</p>
+                  <a href=""><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+               </div>
+                </div>
+
+              </div>
+
+              <div class="col-sm-2"><!--adding cards in the coloumns of the rows -->
+                <div class="card" style="width:200px;" id="cardbox" >
+                  <img class="card-img-top" id="cardimg" src="https://img3.junaroad.com/uiproducts/18289478/zoom_0-1648621739.jpg">
+                  <div class="card-body">
+                    <p class="card-title" id="carttitle" style="text-align:center;"><b>Luckhnovi Kurta</b></p>
+                    <p class="card-text" style="text-align:center;">Flat 50% off</p>
+                    <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                 </div>
+                  </div>
+                  
+                </div>
+
+                <div class="col-sm-2"><!--adding cards in the coloumns of the rows -->
+                  <div class="card" style="width:200px;" id="cardbox" >
+                    <img class="card-img-top" id="cardimg" src="https://img3.junaroad.com/uiproducts/18387667/zoom_0-1653896305.jpg">
+                    <div class="card-body">
+                      <p class="card-title" id="carttitle" style="text-align:center;"><b>Luckhnovi Kurta</b></p>
+                      <p class="card-text" style="text-align:center;">Flat 50% off</p>
+                      <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                   </div>
+                    </div>
+                    
+                  </div>
+
+                  <div class="col-sm-2"><!--adding cards in the coloumns of the rows -->
+                    <div class="card" style="width:200px;" id="cardbox" >
+                      <img class="card-img-top" id="cardimg" src="https://img3.junaroad.com/uiproducts/18341938/zoom_0-1650864407.jpg">
+                      <div class="card-body">
+                        <p class="card-title" id="carttitle" style="text-align:center;"><b>Luckhnovi Kurta</b></p>
+                        <p class="card-text" style="text-align:center;">Flat 50% off</p>
+                        <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                     </div>
+                      </div>
+                      
+                    </div>
+
+                    <div class="col-sm-2"><!--adding cards in the coloumns of the rows -->
+                      <div class="card" style="width:200px;" id="cardbox" >
+                        <img class="card-img-top" id="cardimg" src="https://img3.junaroad.com/uiproducts/18387663/pri_175_p-1653896305.jpg" alt="image not available">
+                        <div class="card-body">
+                          <p class="card-title" id="carttitle" style="text-align:center;"><b>Luckhnovi Kurta</b></p>
+                          <p class="card-text" style="text-align:center;">Flat 50% off</p>
+                          <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                       </div>
+                        </div>
+                        
+                      </div>
+
+            </div>
+          </div>
+         
+          <div class="carousel-item">
+            <div class="row" style="width:100%;margin-top: 10px;">
+
+              <div class="col-sm-1"></div>
+              
+              <div class="col-sm-2">
+              <div class="card" style="width:200px;" id="cardbox" ><!--adding cards in the coloumns of the rows -->
+                <img class="card-img-top" id="cardimg" src="https://img3.junaroad.com/uiproducts/18876169/zoom_0-1671118745.jpg" alt="image not available">
+                <div class="card-body">
+                  <p class="card-title" id="carttitle" style="text-align:center;"><b>Men Kurta</b></p>
+                  <p class="card-text" style="text-align:center;">Flat 50% off</p>
+                  <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+               </div>
+                </div>
+
+              </div>
+
+              <div class="col-sm-2">
+                <div class="card" style="width:200px;" id="cardbox" ><!--adding cards in the coloumns of the rows -->
+                  <img class="card-img-top" id="cardimg" src="https://img3.junaroad.com/uiproducts/18474105/zoom_0-1661592672.jpg" alt="image not available">
+                  <div class="card-body">
+                    <p class="card-title" id="carttitle" style="text-align:center;"><b>men shirt</b></p>
+                    <p class="card-text" style="text-align:center;">Flat 50% off</p>
+                    <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                 </div>
+                  </div>
+                  
+                </div>
+
+                <div class="col-sm-2">
+                  <div class="card" style="width:200px;" id="cardbox" ><!--adding cards in the coloumns of the rows -->
+                    <img class="card-img-top" id="cardimg" src="https://img3.junaroad.com/uiproducts/18344832/zoom_0-1650892370.jpg" alt="image not available">
+                    <div class="card-body">
+                      <p class="card-title" id="carttitle" style="text-align:center;"><b>men Suit</b></p>
+                      <p class="card-text" style="text-align:center;">Flat 50% off</p>
+                      <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                   </div>
+                    </div>
+                    
+                  </div>
+
+                  <div class="col-sm-2"><!--adding cards in the coloumns of the rows -->
+                    <div class="card" style="width:200px;" id="cardbox" >
+                      <img class="card-img-top" id="cardimg" src="https://img3.junaroad.com/uiproducts/18524435/zoom_0-1663386866.jpg" alt="image not available">
+                      <div class="card-body">
+                        <p class="card-title" id="carttitle" style="text-align:center;"><b>men shirt</b></p>
+                        <p class="card-text" style="text-align:center;">Flat 50% off</p>
+                        <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                     </div>
+                      </div>
+                      
+                    </div>
+
+                    <div class="col-sm-2"><!--adding cards in the coloumns of the rows -->
+                      <div class="card" style="width:200px;" id="cardbox" >
+                        <img class="card-img-top" id="cardimg" src="https://img3.junaroad.com/uiproducts/18754727/zoom_0-1670138032.jpg" alt="image not available">
+                        <div class="card-body">
+                          <p class="card-title" id="carttitle" style="text-align:center;"><b>men shorts</b></p>
+                          <p class="card-text" style="text-align:center;">Flat 50% off</p>
+                          <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                       </div>
+                        </div>
+                        
+                      </div>
+
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row" style="width:100%;margin-top: 10px;">
+
+              <div class="col-sm-1"></div>
+              
+              <div class="col-sm-2"><!--adding cards in the coloumns of the rows -->
+              <div class="card" style="width:200px;" id="cardbox" >
+                <img class="card-img-top" id="cardimg" src="https://img3.junaroad.com/uiproducts/18445072/zoom_0-1658736348.jpg" alt="image not available">
+                <div class="card-body">
+                  <p class="card-title" id="carttitle" style="text-align:center;"><b>Froks</b></p>
+                  <p class="card-text" style="text-align:center;">Flat 50% off</p>
+                  <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+               </div>
+                </div>
+
+              </div>
+
+              <div class="col-sm-2"><!--adding cards in the coloumns of the rows -->
+                <div class="card" style="width:200px;" id="cardbox" >
+                  <img class="card-img-top" id="cardimg" src="https://img3.junaroad.com/uiproducts/18649460/zoom_1-1668003469.jpg" alt="image not available">
+                  <div class="card-body">
+                    <p class="card-title" id="carttitle" style="text-align:center;"><b>Kids shirt</b></p>
+                    <p class="card-text" style="text-align:center;">Flat 50% off</p>
+                    <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                 </div>
+                  </div>
+                  
+                </div>
+
+                <div class="col-sm-2"><!--adding cards in the coloumns of the rows -->
+                  <div class="card" style="width:200px;" id="cardbox" >
+                    <img class="card-img-top" id="cardimg" src="https://img3.junaroad.com/uiproducts/18526052/zoom_0-1663846469.jpg" alt="image not available">
+                    <div class="card-body">
+                      <p class="card-title" id="carttitle" style="text-align:center;"><b>kids shirt</b></p>
+                      <p class="card-text" style="text-align:center;">Flat 50% off</p>
+                      <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                   </div>
+                    </div>
+                    
+                  </div>
+
+                  <div class="col-sm-2"><!--adding cards in the coloumns of the rows -->
+                    <div class="card" style="width:200px;" id="cardbox" >
+                      <img class="card-img-top" id="cardimg" src="https://img3.junaroad.com/uiproducts/18473271/zoom_0-1661148364.jpg" alt="image not available">
+                      <div class="card-body">
+                        <p class="card-title" id="carttitle" style="text-align:center;"><b>frock</b></p>
+                        <p class="card-text" style="text-align:center;">Flat 50% off</p>
+                        <a href="#"><button class="btn btn-primary" onclick="cart()"  id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                     </div>
+                      </div>
+                      
+                    </div>
+
+                    <div class="col-sm-2"><!--adding cards in the coloumns of the rows -->
+                      <div class="card" style="width:200px;" id="cardbox" >
+                        <img class="card-img-top" id="cardimg" src="https://img3.junaroad.com/uiproducts/18595209/zoom_0-1666008062.jpg" alt="image not available">
+                        <div class="card-body">
+                          <p class="card-title" id="carttitle" style="text-align:center;"><b>frock</b></p>
+                          <p class="card-text" style="text-align:center;">Flat 50% off</p>
+                          <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                       </div>
+                        </div>
+                        
+                      </div>
+
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" id="prev" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" id="next" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      <!--end of third featured slide-->
+      <div class="row" id="navigation3" style="width:101.5%;text-align: center;">
+        <div class="col-sm-2"><h1></h1></div>
+        <div class="col-sm-8"><h1>..</h1></div>
+        <div class="col-sm-2"><h1></h1></div>
+      </div>
+
+<!--sponserd box for tablets-->
+
+<br><br>
+<div id="newarrivaldivboxtablet">
+  <div class="row" >
+  
+    <!--This the sponserd block cantaining a row with two coloumns 
+        1st coloumn : contain the picture 
+         2nd coloumn: contain the cards positioned through the rows and and cloumn method-->
+    <div class="col-sm-4">
+     <div class="sponsoredlogo" style="width:400px;height:300px; background-color:blue;margin-left: 10px;border:1px solid black;box-shadow: 10px 10px 18px #888888;">
+    <img src="newarrival.png" style="width:400px;height:300px;">
+    <button type="button" id="buttonarrival" class="form-control" style="position:absolute; margin-top:-50px; text-align: center;width:400px;border:1px solid purple" >SHOP NOW</button>
+    </div>
+    </div>
+  
+    <div class="col-sm-8">
+      <div class="sponsored" style="height:300px;background-color:white;margin-left: -50px; border:1px solid black;box-shadow: 10px 10px 18px #888888;">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false" >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row">
+                <div class="col-sm-1"></div>
+  
+                <div class="col-sm-2"><!--creating a cart -->
+                  <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                    <img class="card-img-top" id="cardimg2" style="height:180px" src="https://img3.junaroad.com/uiproducts/18607420/zoom_0-1666437297.jpg">
+                    <div class="card-body">
+                    
+                      <p class="card-text" style="text-align:center;color:black;
+                      text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                      <a href="#"><button class="btn btn-primary" onclick="cartvaluemobile()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                   </div>
+                    </div>
+                </div>
+  
+                <div class="col-sm-2" style="margin-left:100px;"><!--creating a cart -->
+                  <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                    <img class="card-img-top" id="cardimg2" style="height:180px" src="https://img3.junaroad.com/uiproducts/18391950/zoom_0-1654073675.jpg" alt="image not available">
+                    <div class="card-body">
+                    
+                      <p class="card-text" style="text-align:center;color:black;
+                      text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                      <a href="#"><button class="btn btn-primary" onclick="cartvaluemobile()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                   </div>
+                    </div>
+                </div>
+  
+                
+  
+              
+  
+                
+  
+  
+  
+  
+                <div class="col-sm-1"></div>
+              </div>
+            </div>
+            <!--first slide of sponsored div 
+  end here-->
+            <div class="carousel-item">
+  
+  
+              <div class="row" >
+                <div class="col-sm-1"></div>
+  
+                <div class="col-sm-2"><!--creating a cart -->
+                  <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                    <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                    <div class="card-body">
+                    
+                      <p class="card-text" style="text-align:center;color:black;
+                      text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                      <a href="#"><button class="btn btn-primary" onclick="cartvaluemobile()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                   </div>
+                    </div>
+                </div>
+  
+                <div class="col-sm-2"  style="margin-left:100px;"><!--creating a cart -->
+                  <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                    <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                    <div class="card-body">
+                    
+                      <p class="card-text" style="text-align:center;color:black;
+                      text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                      <a href="#"><button class="btn btn-primary" onclick="cartvaluemobile()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                   </div>
+                    </div>
+                </div>
+  
+                
+  
+                
+  
+              
+  
+  
+  
+  
+                <div class="col-sm-1"></div>
+              </div>
+  
+  
+            </div>
+            <div class="carousel-item">
+  
+  
+              <div class="row">
+                <div class="col-sm-1"></div>
+  
+                <div class="col-sm-2"><!--creating a cart -->
+                  <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                    <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                    <div class="card-body">
+                    
+                      <p class="card-text" style="text-align:center;color:black;
+                      text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                      <a href="#"><button class="btn btn-primary" onclick="cartvaluemobile()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                   </div>
+                    </div>
+                </div>
+  
+                <div class="col-sm-2"  style="margin-left:100px;"><!--creating a cart -->
+                  <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                    <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                    <div class="card-body">
+                    
+                      <p class="card-text" style="text-align:center;color:black;
+                      text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                      <a href="#"><button class="btn btn-primary" onclick="cartvaluemobile()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                   </div>
+                    </div>
+                </div>
+  
+                
+  
+               
+  
+                
+  
+  
+  
+  
+                <div class="col-sm-1"></div>
+              </div>
+  
+  
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon"  aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon"  aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+
+<!--sponserd box for tablet end here-->
+<!--mens trending for tablet-->
+<br>
+<div id="newarrivaldivboxtablet">
+  <div class="row" >
+  
+    <!--This the sponserd block cantaining a row with two coloumns 
+        1st coloumn : contain the picture 
+         2nd coloumn: contain the cards positioned through the rows and and cloumn method-->
+    <div class="col-sm-4">
+     <div class="sponsoredlogo" style="width:400px;height:300px; background-color:blue;margin-left: 10px;border:1px solid black;box-shadow: 10px 10px 18px #888888;">
+    <img src="mentrending.png" style="width:400px;height:300px;">
+    <button type="button" id="buttonarrival" class="form-control" style="position:absolute; margin-top:-50px; text-align: center;width:400px;border:1px solid purple" >SHOP NOW</button>
+    </div>
+    </div>
+  
+    <div class="col-sm-8">
+      <div class="sponsored" style="height:300px;background-color:white;margin-left: -50px; border:1px solid black;box-shadow: 10px 10px 18px #888888;">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false" >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row">
+                <div class="col-sm-1"></div>
+  
+                <div class="col-sm-2"><!--creating a cart -->
+                  <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                    <img class="card-img-top" id="cardimg2" style="height:180px" src="https://img3.junaroad.com/uiproducts/18377249/zoom_0-1653055930.jpg">
+                    <div class="card-body">
+                    
+                      <p class="card-text" style="text-align:center;color:black;
+                      text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                      <a href="#"><button class="btn btn-primary" onclick="cartvaluemobile()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                   </div>
+                    </div>
+                </div>
+  
+                <div class="col-sm-2" style="margin-left:100px;"><!--creating a cart -->
+                  <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                    <img class="card-img-top" id="cardimg2" style="height:180px" src="https://img3.junaroad.com/uiproducts/18471092/zoom_0-1660991925.jpg">
+                    <div class="card-body">
+                    
+                      <p class="card-text" style="text-align:center;color:black;
+                      text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                      <a href="#"><button class="btn btn-primary" onclick="cartvaluemobile()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                   </div>
+                    </div>
+                </div>
+  
+                
+  
+              
+  
+                
+  
+  
+  
+  
+                <div class="col-sm-1"></div>
+              </div>
+            </div>
+            <!--first slide of sponsored div 
+  end here-->
+            <div class="carousel-item">
+  
+  
+              <div class="row" >
+                <div class="col-sm-1"></div>
+  
+                <div class="col-sm-2"><!--creating a cart -->
+                  <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                    <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                    <div class="card-body">
+                    
+                      <p class="card-text" style="text-align:center;color:black;
+                      text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                      <a href="#"><button class="btn btn-primary" onclick="cartvaluemobile()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                   </div>
+                    </div>
+                </div>
+  
+                <div class="col-sm-2"  style="margin-left:100px;"><!--creating a cart -->
+                  <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                    <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                    <div class="card-body">
+                    
+                      <p class="card-text" style="text-align:center;color:black;
+                      text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                      <a href="#"><button class="btn btn-primary" onclick="cartvaluemobile()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                   </div>
+                    </div>
+                </div>
+  
+                
+  
+                
+  
+              
+  
+  
+  
+  
+                <div class="col-sm-1"></div>
+              </div>
+  
+  
+            </div>
+            <div class="carousel-item">
+  
+  
+              <div class="row">
+                <div class="col-sm-1"></div>
+  
+                <div class="col-sm-2"><!--creating a cart -->
+                  <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                    <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                    <div class="card-body">
+                    
+                      <p class="card-text" style="text-align:center;color:black;
+                      text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                      <a href="#"><button class="btn btn-primary" onclick="cartvaluemobile()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                   </div>
+                    </div>
+                </div>
+  
+                <div class="col-sm-2"  style="margin-left:100px;"><!--creating a cart -->
+                  <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                    <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                    <div class="card-body">
+                    
+                      <p class="card-text" style="text-align:center;color:black;
+                      text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                      <a href="#"><button class="btn btn-primary" onclick="cartvaluemobile()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                   </div>
+                    </div>
+                </div>
+  
+                
+  
+               
+  
+                
+  
+  
+  
+  
+                <div class="col-sm-1"></div>
+              </div>
+  
+  
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon"   aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon"   aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+<!--mens trending for tablet end here -->
+<div class="row" id="navigation3" style="width:101.5%;text-align: center;">
+    <div class="col-sm-2"><h1></h1></div>
+    <div class="col-sm-8"><h1>..</h1></div>
+    <div class="col-sm-2"><h1></h1></div>
+  </div>
+
+<!--sponserd box for tablets-->
+
+<br><br>
+<div id="newarrivaldivboxtablet">
+<div class="row" >
+
+<!--This the sponserd block cantaining a row with two coloumns 
+    1st coloumn : contain the picture 
+     2nd coloumn: contain the cards positioned through the rows and and cloumn method-->
+<div class="col-sm-4">
+ <div class="sponsoredlogo" style="width:400px;height:300px; background-color:blue;margin-left: 10px;border:1px solid black;box-shadow: 10px 10px 18px #888888;">
+<img src="newarrival.png" style="width:400px;height:300px;">
+<button type="button" id="buttonarrival" class="form-control" style="position:absolute; margin-top:-50px; text-align: center;width:400px;border:1px solid purple" >SHOP NOW</button>
+</div>
+</div>
+
+<div class="col-sm-8">
+  <div class="sponsored" style="height:300px;background-color:white;margin-left: -50px; border:1px solid black;box-shadow: 10px 10px 18px #888888;">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false" >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-sm-1"></div>
+
+            <div class="col-sm-2"><!--creating a cart -->
+              <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                <img class="card-img-top" id="cardimg2" style="height:180px" src="https://img3.junaroad.com/uiproducts/18607420/zoom_0-1666437297.jpg">
+                <div class="card-body">
+                
+                  <p class="card-text" style="text-align:center;color:black;
+                  text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                  <a href="#"><button class="btn btn-primary" onclick="cartvaluemobile()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+               </div>
+                </div>
+            </div>
+
+            <div class="col-sm-2" style="margin-left:100px;"><!--creating a cart -->
+              <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                <img class="card-img-top" id="cardimg2" style="height:180px" src="https://img3.junaroad.com/uiproducts/18391950/zoom_0-1654073675.jpg" alt="image not available">
+                <div class="card-body">
+                
+                  <p class="card-text" style="text-align:center;color:black;
+                  text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                  <a href="#"><button class="btn btn-primary" onclick="cartvaluemobile()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+               </div>
+                </div>
+            </div>
+
+            
+
+          
+
+            
+
+
+
+
+            <div class="col-sm-1"></div>
+          </div>
+        </div>
+        <!--first slide of sponsored div 
+end here-->
+        <div class="carousel-item">
+
+
+          <div class="row" >
+            <div class="col-sm-1"></div>
+
+            <div class="col-sm-2"><!--creating a cart -->
+              <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                <div class="card-body">
+                
+                  <p class="card-text" style="text-align:center;color:black;
+                  text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                  <a href="#"><button class="btn btn-primary" onclick="cartvaluemobile()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+               </div>
+                </div>
+            </div>
+
+            <div class="col-sm-2"  style="margin-left:100px;"><!--creating a cart -->
+              <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                <div class="card-body">
+                
+                  <p class="card-text" style="text-align:center;color:black;
+                  text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                  <a href="#"><button class="btn btn-primary" onclick="cartvaluemobile()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+               </div>
+                </div>
+            </div>
+
+            
+
+            
+
+          
+
+
+
+
+            <div class="col-sm-1"></div>
+          </div>
+
+
+        </div>
+        <div class="carousel-item">
+
+
+          <div class="row">
+            <div class="col-sm-1"></div>
+
+            <div class="col-sm-2"><!--creating a cart -->
+              <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                <div class="card-body">
+                
+                  <p class="card-text" style="text-align:center;color:black;
+                  text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                  <a href="#"><button class="btn btn-primary" onclick="cartvaluemobile()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+               </div>
+                </div>
+            </div>
+
+            <div class="col-sm-2"  style="margin-left:100px;"><!--creating a cart -->
+              <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                <div class="card-body">
+                
+                  <p class="card-text" style="text-align:center;color:black;
+                  text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                  <a href="#"><button class="btn btn-primary" onclick="cartvaluemobile()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+               </div>
+                </div>
+            </div>
+
+            
+
+           
+
+            
+
+
+
+
+            <div class="col-sm-1"></div>
+          </div>
+
+
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon"  aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon"  aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+
+
+<!--sponserd box for tablet end here-->
+<!--mens trending for tablet-->
+<br>
+<div id="newarrivaldivboxtablet">
+<div class="row" >
+
+<!--This the sponserd block cantaining a row with two coloumns 
+    1st coloumn : contain the picture 
+     2nd coloumn: contain the cards positioned through the rows and and cloumn method-->
+<div class="col-sm-4">
+ <div class="sponsoredlogo" style="width:400px;height:300px; background-color:blue;margin-left: 10px;border:1px solid black;box-shadow: 10px 10px 18px #888888;">
+<img src="mentrending.png" style="width:400px;height:300px;">
+<button type="button" id="buttonarrival" class="form-control" style="position:absolute; margin-top:-50px; text-align: center;width:400px;border:1px solid purple" >SHOP NOW</button>
+</div>
+</div>
+
+<div class="col-sm-8">
+  <div class="sponsored" style="height:300px;background-color:white;margin-left: -50px; border:1px solid black;box-shadow: 10px 10px 18px #888888;">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false" >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-sm-1"></div>
+
+            <div class="col-sm-2"><!--creating a cart -->
+              <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                <img class="card-img-top" id="cardimg2" style="height:180px" src="https://img3.junaroad.com/uiproducts/18377249/zoom_0-1653055930.jpg">
+                <div class="card-body">
+                
+                  <p class="card-text" style="text-align:center;color:black;
+                  text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                  <a href="#"><button class="btn btn-primary" onclick="cartvaluemobile()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+               </div>
+                </div>
+            </div>
+
+            <div class="col-sm-2" style="margin-left:100px;"><!--creating a cart -->
+              <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                <img class="card-img-top" id="cardimg2" style="height:180px" src="https://img3.junaroad.com/uiproducts/18471092/zoom_0-1660991925.jpg">
+                <div class="card-body">
+                
+                  <p class="card-text" style="text-align:center;color:black;
+                  text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                  <a href="#"><button class="btn btn-primary" onclick="cartvaluemobile()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+               </div>
+                </div>
+            </div>
+
+            
+
+          
+
+            
+
+
+
+
+            <div class="col-sm-1"></div>
+          </div>
+        </div>
+        <!--first slide of sponsored div 
+end here-->
+        <div class="carousel-item">
+
+
+          <div class="row" >
+            <div class="col-sm-1"></div>
+
+            <div class="col-sm-2"><!--creating a cart -->
+              <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                <div class="card-body">
+                
+                  <p class="card-text" style="text-align:center;color:black;
+                  text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                  <a href="#"><button class="btn btn-primary" onclick="cartvaluemobile()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+               </div>
+                </div>
+            </div>
+
+            <div class="col-sm-2"  style="margin-left:100px;"><!--creating a cart -->
+              <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                <div class="card-body">
+                
+                  <p class="card-text" style="text-align:center;color:black;
+                  text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                  <a href="#"><button class="btn btn-primary" onclick="cartvaluemobile()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+               </div>
+                </div>
+            </div>
+
+            
+
+            
+
+          
+
+
+
+
+            <div class="col-sm-1"></div>
+          </div>
+
+
+        </div>
+        <div class="carousel-item">
+
+
+          <div class="row">
+            <div class="col-sm-1"></div>
+
+            <div class="col-sm-2"><!--creating a cart -->
+              <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                <div class="card-body">
+                
+                  <p class="card-text" style="text-align:center;color:black;
+                  text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                  <a href="#"><button class="btn btn-primary" onclick="cartvaluemobile()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+               </div>
+                </div>
+            </div>
+
+            <div class="col-sm-2"  style="margin-left:100px;"><!--creating a cart -->
+              <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                <div class="card-body">
+                
+                  <p class="card-text" style="text-align:center;color:black;
+                  text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                  <a href="#"><button class="btn btn-primary" onclick="cartvaluemobile()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+               </div>
+                </div>
+            </div>
+
+            
+
+           
+
+            
+
+
+
+
+            <div class="col-sm-1"></div>
+          </div>
+
+
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon"   aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon"   aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<!--mens trending for tablet end here -->
+
+<!--mens trending devision start here-->
+<!--creating another devision just like sponserd devision to show mens trending -->
+<div id="newarrivaldivbox">
+<div class="row" >
+  <div class="col-sm-4">
+   <div class="sponsoredlogo" style="width:400px;height:300px; background-color:blue;margin-left: 10px;border:1px solid black;box-shadow: 10px 10px 18px #888888;">
+  <img src="mentrending.png" style="width:400px;height:300px;">
+  <button type="button" id="buttonarrival" class="form-control" style="position:absolute; margin-top:-50px; text-align: center;width:400px;border:1px solid purple" >SHOP NOW</button>
+  </div>
+  </div>
+
+  <div class="col-sm-8">
+    <div class="sponsored" style="height:300px;background-color: white;margin-left: -50px; border:1px solid black;box-shadow: 10px 10px 18px #888888;">
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false" >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-sm-1"></div>
+
+              <div class="col-sm-2"><!--creating the cart -->
+                <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                  <img class="card-img-top" id="cardimg2" style="height:180px" src="https://img3.junaroad.com/uiproducts/18330655/zoom_0-1649845688.jpg" alt="image not available">
+                  <div class="card-body">
+                  
+                    <p class="card-text" style="text-align:center;color:black;
+                    text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                    <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                 </div>
+                  </div>
+              </div>
+
+              <div class="col-sm-2"><!--creating the cart -->
+                <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                  <img class="card-img-top" id="cardimg2" style="height:180px" src="https://img3.junaroad.com/uiproducts/17936658/zoom_0-1629552826.jpg" alt="image not available">
+                  <div class="card-body">
+                  
+                    <p class="card-text" style="text-align:center;color:black;
+                    text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                    <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                 </div>
+                  </div>
+              </div>
+
+              <div class="col-sm-2"><!--creating the cart -->
+                <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                  <img class="card-img-top" id="cardimg2" style="height:180px" src="https://img3.junaroad.com/uiproducts/18375992/zoom_0-1652880131.jpg" alt="image not available">
+                  <div class="card-body">
+                  
+                    <p class="card-text" style="text-align:center;color:black;
+                    text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                    <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                 </div>
+                  </div>
+              </div>
+
+              <div class="col-sm-2"><!--creating the cart -->
+                <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                  <img class="card-img-top" id="cardimg2" style="height:180px" src="https://img3.junaroad.com/uiproducts/16980160/zoom_1-1583318859.jpg" alt="image not available">
+                  <div class="card-body">
+                  
+                    <p class="card-text" style="text-align:center;color:black;
+                    text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                    <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                 </div>
+                  </div>
+              </div>
+
+              <div class="col-sm-2"><!--creating the cart -->
+                <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                  <img class="card-img-top" id="cardimg2" style="height:180px" src="https://img3.junaroad.com/uiproducts/18476004/zoom_1-1661266965.jpg" alt="image not available">
+                  <div class="card-body">
+                  
+                    <p class="card-text" style="text-align:center;color:black;
+                    text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                    <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                 </div>
+                  </div>
+              </div>
+
+
+
+
+              <div class="col-sm-1"></div>
+            </div>
+          </div>
+          <!--first slide of sponsored div 
+end here-->
+          <div class="carousel-item">
+
+
+            <div class="row" >
+              <div class="col-sm-1"></div>
+
+              <div class="col-sm-2"><!--creating the cart -->
+                <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                  <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                  <div class="card-body">
+                  
+                    <p class="card-text" style="text-align:center;color:black;
+                    text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                    <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                 </div>
+                  </div>
+              </div>
+
+              <div class="col-sm-2"><!--creating the cart -->
+                <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                  <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                  <div class="card-body">
+                  
+                    <p class="card-text" style="text-align:center;color:black;
+                    text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                    <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                 </div>
+                  </div>
+              </div>
+
+              <div class="col-sm-2"><!--creating the cart -->
+                <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                  <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                  <div class="card-body">
+                  
+                    <p class="card-text" style="text-align:center;color:black;
+                    text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                    <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                 </div>
+                  </div>
+              </div>
+
+              <div class="col-sm-2"><!--creating the cart -->
+                <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                  <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                  <div class="card-body">
+                  
+                    <p class="card-text" style="text-align:center;color:black;
+                    text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                    <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                 </div>
+                  </div>
+              </div>
+
+              <div class="col-sm-2"><!--creating the cart -->
+                <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                  <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                  <div class="card-body">
+                  
+                    <p class="card-text" style="text-align:center;color:black;
+                    text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                    <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                 </div>
+                  </div>
+              </div>
+
+
+
+
+              <div class="col-sm-1"></div>
+            </div>
+
+
+          </div>
+          <div class="carousel-item">
+
+
+            <div class="row">
+              <div class="col-sm-1"></div>
+
+              <div class="col-sm-2"><!--creating the cart -->
+                <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                  <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                  <div class="card-body">
+                  
+                    <p class="card-text" style="text-align:center;color:black;
+                    text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                    <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                 </div>
+                  </div>
+              </div>
+
+              <div class="col-sm-2"><!--creating the cart -->
+                <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                  <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                  <div class="card-body">
+                  
+                    <p class="card-text" style="text-align:center;color:black;
+                    text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                    <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                 </div>
+                  </div>
+              </div>
+
+              <div class="col-sm-2"><!--creating the cart -->
+                <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                  <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                  <div class="card-body">
+                  
+                    <p class="card-text" style="text-align:center;color:black;
+                    text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                    <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                 </div>
+                  </div>
+              </div>
+
+              <div class="col-sm-2"><!--creating the cart -->
+                <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                  <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                  <div class="card-body">
+                  
+                    <p class="card-text" style="text-align:center;color:black;
+                    text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                    <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                 </div>
+                  </div>
+              </div>
+
+              <div class="col-sm-2"><!--creating the cart -->
+                <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                  <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                  <div class="card-body">
+                  
+                    <p class="card-text" style="text-align:center;color:black;
+                    text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                    <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                 </div>
+                  </div>
+              </div>
+
+
+
+
+              <div class="col-sm-1"></div>
+            </div>
+
+
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" id="prevnewarrival"  aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" id="nextnewarrival"  aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!--menstrending devision end here -->
+
+<div class="row" id="navigation2" style="width:101.5%;text-align: center;">
+  <div class="col-sm-2"><h1></h1></div>
+  <div class="col-sm-8"><h1>..</h1></div>
+  <div class="col-sm-2"><h1></h1></div>
+</div>
+<!--slideshow inbetween start here -->
+
+<!--this is inberween cart for the slide show
+ code: taken from the bootstrap -->
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" id="inbetweenslide">
+  <ol class="carousel-indicators" id="inbetweenslide" >
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <!--now we are adding the images in the slide show -->
+  <div class="carousel-inner" id="inbetweenslide" >
+    <div class="carousel-item active">
+      <div class="row" style="width:100%;margin-top: 10px;">
+
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10">
+        <img class="d-block w-100" src="https://www.seoclerk.com/pics/000/956/122/08ef29db9e01b139edf3b94e6c048dd3.jpg" alt="First slide">
+        </div>
+    </div>
+    </div>
+    <div class="carousel-item">
+      <div class="row" style="width:100%;margin-top: 10px;">
+
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10">
+        <img class="d-block w-100" src="https://www.seoclerk.com/pics/000/956/122/08ef29db9e01b139edf3b94e6c048dd3.jpg" alt="First slide">
+        </div>
+    </div>
+    </div>
+    <div class="carousel-item">
+      <div class="row" style="width:100%;margin-top: 10px;">
+
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10">
+        <img class="d-block w-100" src="https://www.seoclerk.com/pics/000/956/122/08ef29db9e01b139edf3b94e6c048dd3.jpg" alt="First slide">
+        </div>
+    </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" id="inbetweenslide" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" id="prev" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" id="inbetweenslide" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" id="next" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<!--end of third featured slide-->
+<div class="row" id="navigation2" style="width:101.5%;text-align: center;">
+  <div class="col-sm-2"><h1></h1></div>
+  <div class="col-sm-8"><h1>..</h1></div>
+  <div class="col-sm-2"><h1></h1></div>
+</div>
+
+
+<!--slideshow inbetween end here-->
+
+<!--women trending start here -->
+
+<br>
+<div id="newarrivaldivbox">
+  <div class="row" >
+    <div class="col-sm-4">
+     <div class="sponsoredlogo" style="width:400px;height:300px; background-color:blue;margin-left: 10px;border:1px solid black;box-shadow: 10px 10px 18px #888888;">
+    <img src="womentrending.png" style="width:400px;height:300px;">
+    <button type="button" id="buttonarrival" class="form-control" style="position:absolute; margin-top:-50px; text-align: center;width:400px;border:1px solid purple" >SHOP NOW</button>
+    </div>
+    </div>
+  
+    <div class="col-sm-8">
+      <div class="sponsored" style="height:300px;background-color: white;margin-left: -50px; border:1px solid black;box-shadow: 10px 10px 18px #888888;">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false" >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row">
+                <div class="col-sm-1"></div>
+  
+                <div class="col-sm-2"><!--creating the cards for the devision-->
+                  <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                    <img class="card-img-top" id="cardimg2" style="height:180px" src="https://img3.junaroad.com/uiproducts/18343427/zoom_0-1650715888.jpg" alt="image not available">
+                    <div class="card-body">
+                    
+                      <p class="card-text" style="text-align:center;color:black;
+                      text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                      <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                   </div>
+                    </div>
+                </div>
+  
+                <div class="col-sm-2"><!--creating the cards for the devision-->
+                  <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                    <img class="card-img-top" id="cardimg2" style="height:180px" src="https://img3.junaroad.com/uiproducts/18473375/zoom_0-1661350765.jpg" alt="image not available">
+                    <div class="card-body">
+                    
+                      <p class="card-text" style="text-align:center;color:black;
+                      text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                      <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                   </div>
+                    </div>
+                </div>
+  
+                <div class="col-sm-2"><!--creating the cards for the devision-->
+                  <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                    <img class="card-img-top" id="cardimg2" style="height:180px" src="https://img3.junaroad.com/uiproducts/17921424/zoom_0-1628852962.jpg" alt="image not available">
+                    <div class="card-body">
+                    
+                      <p class="card-text" style="text-align:center;color:black;
+                      text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                      <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                   </div>
+                    </div>
+                </div>
+  
+                <div class="col-sm-2"><!--creating the cards for the devision-->
+                  <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                    <img class="card-img-top" id="cardimg2" style="height:180px" src="https://img3.junaroad.com/uiproducts/18402847/zoom_0-1655220533.jpg" alt="image not available">
+                    <div class="card-body">
+                    
+                      <p class="card-text" style="text-align:center;color:black;
+                      text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                      <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                   </div>
+                    </div>
+                </div>
+  
+                <div class="col-sm-2"><!--creating the cards for the devision-->
+                  <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                    <img class="card-img-top" id="cardimg2" style="height:180px" src="https://img3.junaroad.com/uiproducts/18343428/zoom_0-1650715888.jpg" alt="image not available">
+                    <div class="card-body">
+                    
+                      <p class="card-text" style="text-align:center;color:black;
+                      text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                      <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                   </div>
+                    </div>
+                </div>
+  
+  
+  
+  
+                <div class="col-sm-1"></div>
+              </div>
+            </div>
+            <!--first slide of sponsored div 
+  end here-->
+            <div class="carousel-item">
+  
+  
+              <div class="row" >
+                <div class="col-sm-1"></div>
+  
+                <div class="col-sm-2"><!--creating the cards for the devision-->
+                  <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                    <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                    <div class="card-body">
+                    
+                      <p class="card-text" style="text-align:center;color:black;
+                      text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                      <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                   </div>
+                    </div>
+                </div>
+  
+                <div class="col-sm-2"><!--creating the cards for the devision-->
+                  <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                    <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                    <div class="card-body">
+                    
+                      <p class="card-text" style="text-align:center;color:black;
+                      text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                      <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                   </div>
+                    </div>
+                </div>
+  
+                <div class="col-sm-2"><!--creating the cards for the devision-->
+                  <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                    <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                    <div class="card-body">
+                    
+                      <p class="card-text" style="text-align:center;color:black;
+                      text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                      <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                   </div>
+                    </div>
+                </div>
+  
+                <div class="col-sm-2"><!--creating the cards for the devision-->
+                  <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                    <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                    <div class="card-body">
+                    
+                      <p class="card-text" style="text-align:center;color:black;
+                      text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                      <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                   </div>
+                    </div>
+                </div>
+  
+                <div class="col-sm-2"><!--creating the cards for the devision-->
+                  <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                    <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                    <div class="card-body">
+                    
+                      <p class="card-text" style="text-align:center;color:black;
+                      text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                      <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                   </div>
+                    </div>
+                </div>
+  
+  
+  
+  
+                <div class="col-sm-1"></div>
+              </div>
+  
+  
+            </div>
+            <div class="carousel-item">
+  
+  
+              <div class="row">
+                <div class="col-sm-1"></div>
+  
+                <div class="col-sm-2"><!--creating the cards for the devision-->
+                  <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                    <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                    <div class="card-body">
+                    
+                      <p class="card-text" style="text-align:center;color:black;
+                      text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                      <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                   </div>
+                    </div>
+                </div>
+  
+                <div class="col-sm-2"><!--creating the cards for the devision-->
+                  <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                    <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                    <div class="card-body">
+                    
+                      <p class="card-text" style="text-align:center;color:black;
+                      text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                      <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                   </div>
+                    </div>
+                </div>
+  
+                <div class="col-sm-2"><!--creating the cards for the devision-->
+                  <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                    <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                    <div class="card-body">
+                    
+                      <p class="card-text" style="text-align:center;color:black;
+                      text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                      <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                   </div>
+                    </div>
+                </div>
+  
+                <div class="col-sm-2"><!--creating the cards for the devision-->
+                  <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                    <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                    <div class="card-body">
+                    
+                      <p class="card-text" style="text-align:center;color:black;
+                      text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                      <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                   </div>
+                    </div>
+                </div>
+  
+                <div class="col-sm-2"><!--creating the cards for the devision-->
+                  <div class="card" style="width:150px;height:280px; margin-top: 10px;" id="cardbox" >
+                    <img class="card-img-top" id="cardimg2" style="height:180px" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                    <div class="card-body">
+                    
+                      <p class="card-text" style="text-align:center;color:black;
+                      text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+                      <a href="#"><button class="btn btn-primary" onclick="cart()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+                   </div>
+                    </div>
+                </div>
+  
+  
+  
+  
+                <div class="col-sm-1"></div>
+              </div>
+  
+  
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" id="prevnewarrival"  aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" id="nextnewarrival"  aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!--women trending slide end here -->
+<br>
+<!--cart box for mobile-->
+<!--here created the cart box specialy for the  mobile screen
+    it will not work on full screen ,but work for the mobile screens  
+  effects: cardbox is sliding devision which slide to the right on click of the button -->
+<div id="cartvaluemobilepayment"  style="overflow: scroll;">
+ 
+    <button id="cross1" type="button"class="form-control" style="float:right;" onclick="cartvaluemobilepaymentcross()"><i  class="fa-sharp fa-solid fa-circle-xmark"></i></button>
+    <div class="card" style="background-color:red; margin-top: -310px; height:300px;">
+      <img class="card-img-top" style="height:300px;"src="https://cdn.shopify.com/s/files/1/1760/4649/products/linen-saree-steel-grey-linen-saree-silk-saree-online-32848965927105.jpg?v=1661250722" alt="inage is not availabe ">
+    <P class="cart-text" style="font-family:Georgia;color:green;">M.R.P.	: ₹ 7000<br>
+      Price	: ₹ 2799<br>
+      You Save	: ₹ 4201 (60%)</P><br>
+      
+
+
+      <p class="card-title"  style="font-family:Georgia;text-align: center;">Order Summary</p>
+      <p style="display:inline-block;">Please Select quantity </p><select id="quantity"class="form-control" style="width:100px;display:inline-block;margin-left: 200px;margin-top:-50px;"> 
+        <!--setting up the quantity option on order summary page-->
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+      <br>
+      <!--setting up the size option on order summary page -->
+      <p style="display:inline-block;">Please select your size</p><select value="Please select your size" id="size"class="form-control" style="width:100px;display:inline-block;margin-left: 200px;margin-top:-50px;">
+       
+         <option>small</option>
+         <option>Medium</option>
+         <option>Large</option>
+         <option>Extra Large</option>
+         
+       </select>
+       
+       <br><button class="form-control" type="button" onClick="checkavailebility();" style="border:1px solid black;width:300px;margin-left: 10px;margin-top: 0px;">Click to Check Availability</button>
+       <br><br>
+       <input type="text" id="available" class="form-control" style="width:300px; color:green; margin-left:10px;margin-top: -38px;border:1px black solid;" readonly>
+       
+       <br><p style="display:inline-block;">Cost </p><input type="text" class="form-control" id="cost"  style="width:100px;display:inline-block;margin-left: 200px;margin-top:-50px;" readonly>
+    
+       <br><input type="text" class="form-control" id="Deliverycharge" value=" Deliverycharge:Rs-50/-" readonly style="width:300px;display:inline-block;margin-left: 10px">
+  
+       <br> <p style="display:inline-block;">Total Cost</p><input type="text" class="form-control" id="totalcost" style="width:100px;display:inline-block;margin-left: 200px;margin-top:-50px;"readonly>
+  
+       <br>
+   <button class="form-control" type="button" onClick="checkout();" style="background-color:green;color:white;"> Check Out </button>
+      
+
+
+
+
+  </div>
+  
+  </div>
+ 
+      <!--featured list for mobile 
+      This featured box will only work for the mobile screen and will not work for the full screen
+       This devision is made hidden with help of display attribute of the CSS for the big screens -->
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel"  >
+        <div class="carousel-inner" id="featuredboxmobile" style="margin-left: -20px;">
+          <div class="carousel-item active" >
+            <div class="row" style="width:100%;margin-top: 10px;">
+
+              <div class="col-sm-1"></div>
+              
+              <div class="col-sm-2"><!--creation of the card box-->
+              <div class="card" style="width:200px;" id="cardbox" >
+                <img class="card-img-top" id="cardimg" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                <div class="card-body">
+                  <p class="card-title" id="carttitle" style="text-align:center;"><b>Luckhnovi Kurta</b></p>
+                  <p class="card-text" style="text-align:center;">Flat 50% off</p>
+                  <button class="btn btn-primary" onclick="cartvaluemobile()" id="cardbutton"><b style="font-weight:400;">order now</b></button>
+               </div>
+                </div>
+
+              </div>
+
+             
+
+                
+
+                  
+                  
+
+            </div>
+          </div>
+         
+          <div class="carousel-item">
+            <div class="row" style="width:100%;margin-top: 10px;">
+
+              <div class="col-sm-1"></div>
+              
+              <div class="col-sm-2"><!--creation of the card box-->
+              <div class="card" style="width:200px;" id="cardbox" >
+                <img class="card-img-top" id="cardimg" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                <div class="card-body">
+                  <p class="card-title" id="carttitle" style="text-align:center;"><b>Luckhnovi Kurta</b></p>
+                  <p class="card-text" style="text-align:center;">Flat 50% off</p>
+                  <button class="btn btn-primary" onclick="cartvaluemobile()" id="cardbutton"><b style="font-weight:400;">order now</b></button>
+               </div>
+                </div>
+
+              </div>
+
+             
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row" style="width:100%;margin-top: 10px;">
+
+              <div class="col-sm-1"></div>
+              
+              <div class="col-sm-2"><!--creation of the card box-->
+              <div class="card" style="width:200px;" id="cardbox" >
+                <img class="card-img-top" id="cardimg" src="https://assetscdn1.paytm.com/images/catalog/product/A/AP/APPRAIN-AND-RAIGULS65146B08CF066/1570613720898_1..jpg?imwidth=320&impolicy=hq" alt="image not available">
+                <div class="card-body">
+                  <p class="card-title" id="carttitle" style="text-align:center;"><b>Luckhnovi Kurta</b></p>
+                  <p class="card-text" style="text-align:center;">Flat 50% off</p>
+                  <button class="btn btn-primary" id="cardbutton" onclick="cartvaluemobile()"><b style="font-weight:400;">order now</b></button>
+               </div>
+                </div>
+
+              </div>
+
+             
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" id="mobprev"  aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" id="mobnext"  aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+ <!--creating devide here-->
+ <div class="row" id="navigation3" style="width:101.5%;text-align: center;">
+  <div class="col-sm-2"><h1></h1></div>
+  <div class="col-sm-8"><h1>..</h1></div>
+  <div class="col-sm-2"><h1></h1></div>
+</div>
+
+   <!--sponser box for mobile -->
+   <!--Here sponser box is specialy ctreated for the mobilescreens 
+       This will be hidden on the full screen through Display attribute of the CSS-->
+  <br>
+   <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false">
+    <div class="carousel-inner" style="background-color:white; float:right;" id="sponsermobile">
+      <div class="carousel-item active">
+        <div class="row" >
+          <div class="col-sm-12">
+           <div class="sponsoredlogo" >
+          <img  src="newarrival.png" style="width:100%;">
+          <button type="button" id="buttonarrival" class="form-control"  >SHOP NOW</button>
+          </div>
+          </div>
+      </div>
+      </div>
+      
+    </div>
+   
+  </div>
+ <!--cards for sponser box in mobile version-->
+
+ <div id="sponserboxcards">
+  <div class="row">
+    <div class="col">
+      <div class="card" style="width:160px;height:280px; margin-top: 10px; margin-left:20px;" id="cardbox" >
+        <img class="card-img-top" id="cardimg2" style="height:180px" src="https://img3.junaroad.com/uiproducts/18876461/zoom_0-1671115271.jpg" alt="image not available">
+        <div class="card-body">
+        
+          <p class="card-text" style="text-align:center;color:black;
+          text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+          <a href="#"><button class="btn btn-primary" onclick="cartvaluemobile()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+       </div>
+        </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:160px;height:280px; margin-top: 10px; margin-left:5px;" id="cardbox" >
+        <img class="card-img-top" id="cardimg2" style="height:180px" src="https://img3.junaroad.com/uiproducts/18734534/zoom_0-1669691422.jpg" alt="image not available">
+        <div class="card-body">
+        
+          <p class="card-text" style="text-align:center;color:black;
+          text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+          <a href="#"><button class="btn btn-primary" onclick="cartvaluemobile()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+       </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <div class="card" style="width:160px;height:280px; margin-top: 10px; margin-left:20px;" id="cardbox" >
+        <img class="card-img-top" id="cardimg2" style="height:180px" src="https://img3.junaroad.com/uiproducts/18735503/zoom_0-1669822827.jpg" alt="image not available">
+        <div class="card-body">
+        
+          <p class="card-text" style="text-align:center;color:black;
+          text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+          <a href="#"><button class="btn btn-primary" onclick="cartvaluemobile()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+       </div>
+        </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width:160px;height:280px; margin-top: 10px; margin-left:5px;" id="cardbox" >
+        <img class="card-img-top" id="cardimg2" style="height:180px" src="https://img3.junaroad.com/uiproducts/18886635/zoom_0-1671285690.jpg" alt="image not available">
+        <div class="card-body">
+        
+          <p class="card-text" style="text-align:center;color:black;
+          text-shadow: 2px 2px 4px lawngreen">Flat 50% off</p>
+          <a href="#"><button class="btn btn-primary" onclick="cartvaluemobile()" id="cardbutton"><b style="font-weight:400;">order now</b></button></a>
+       </div>
+        </div>
+    </div>
+  </div>
+
+
+ </div>
+
+ <!--end of cards for mobile phone-->
+ <div class="row" id="navigation3" style="width:101.5%;text-align: center;">
+  <div class="col-sm-2"><h1></h1></div>
+  <div class="col-sm-8"><h1>..</h1></div>
+  <div class="col-sm-2"><h1></h1></div>
+</div>
+
+
+<!--this is inbetween cart for the slide show in mobile version
+ code: taken from the bootstrap -->
+ <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" id="inbetweenslidemobile">
+  <ol class="carousel-indicators" id="inbetweenslidenmobile" >
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <!--now we are adding the images in the slide show -->
+  <div class="carousel-inner" id="inbetweenslidemobile" style="margin-left: 15px;">
+    <div class="carousel-item active">
+      <div class="row" style="width:100%;margin-top: 10px;">
+
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10">
+        <img class="d-block w-100" src="https://www.seoclerk.com/pics/000/956/122/08ef29db9e01b139edf3b94e6c048dd3.jpg" alt="First slide">
+        </div>
+    </div>
+    </div>
+    <div class="carousel-item">
+      <div class="row" style="width:100%;margin-top: 10px;">
+
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10">
+        <img class="d-block w-100" src="https://www.seoclerk.com/pics/000/956/122/08ef29db9e01b139edf3b94e6c048dd3.jpg" alt="First slide">
+        </div>
+    </div>
+    </div>
+    <div class="carousel-item">
+      <div class="row" style="width:100%;margin-top: 10px;">
+
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10">
+        <img class="d-block w-100" src="https://www.seoclerk.com/pics/000/956/122/08ef29db9e01b139edf3b94e6c048dd3.jpg" alt="First slide">
+        </div>
+    </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" id="inbetweenslide" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" id="prev" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" id="inbetweenslide" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" id="next" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<!--end of third featured slide-->
+<div class="row" id="navigation2" style="width:101.5%;text-align: center;">
+  <div class="col-sm-2"><h1></h1></div>
+  <div class="col-sm-8"><h1>..</h1></div>
+  <div class="col-sm-2"><h1></h1></div>
+</div>
+
+
+<!--slideshow inbetween for mobile phone end here-->
+
+
+
+
+ <!--Product description for mobile -->
+ <div id="cartvaluemobile" >
+  <div class="card" style="width:350px; height:400px">
+    <div class="card-img">
+      <button type="button" id="cross" class="form-control" style="float:right;" onclick="cartvaluemobilecross()"><i  class="fa-sharp fa-solid fa-circle-xmark"></i></button>
+      <img style="width:350px; height:400px" src="https://img3.junaroad.com/uiproducts/18465877/std_300_1-1660317111.jpg" alt="image not available">
+    </div>
+  </div>
+  <div class="card" style="width:350px; height:400px">
+    <div class="card-title">
+      <p style="font-family:Georgia; text-align: center;"><b>Embroidered SareeE</b></p>
+    &nbsp;&nbsp;  <i class="fa-sharp fa-solid fa-share-nodes"></i>&nbsp;&nbsp;<i class="fa-brands fa-square-whatsapp"></i><button type="button" style="width:70px;margin-top:-38px;margin-left: 200px; background-color:red; color:white;"class="form-control"><i class="fa-regular fa-heart"></i></button>
+  
+
+      <div class="class-text">
+        <p style="color:green;font-family:Georgia; text-align: justify;">&nbsp;&nbsp;M.R.P.	: ₹ 6750<br>
+          &nbsp;&nbsp;Price	: ₹ 2269<br>
+          &nbsp;&nbsp;Today's Price	: ₹ 2249<br>
+          &nbsp;&nbsp;You Save	: ₹ 4501 (67%)</p>
+        <p style="font-family:Georgia; text-align: justify;">&nbsp;&nbsp;sangam prints brings to you this saree which is made from linen fabric and is available in attractive colours. the saree is a suitable amalgamation of style with the grace that is required from an ethnic wear</p>  
+      </div>
+      <button type="button" id="buttonmobiledescription" class="form-control" onclick="cartvaluemobilepayment()">Place Order</button>
+      
+    </div>
+
+    </div>
+  </div>
+  
+ <div id="blanket" >
+  
+</div>
+      <!--FOOTER-->
+      <br>
+      <br>
+      <div class="row" style="background-color: black; color:white; ">
+      <div class="col-sm-3">
+        <ul id="ulfooter"><h6>Women</h6>
+<li>All product</li>
+<li>Dresses</li>
+<li>Pants</li>
+<li>Skirts</li></ul>
+      </div>
+      <div class="col-sm-3">
+        <ul id="ulfooter"><h6>Men</h6>
+<li>All product</li>
+<li>Shirts</li>
+<li>Pants</li>
+<li>Hoodies</li></ul>
+
+      </div>
+      <div class="col-sm-3">
+        <ul id="ulfooter"><h6>Kids</h6>
+<li>All product</li>
+<li>Shoes</li>
+<li>Pants</li>
+<li>Shirts</li>
+<li>Jackets</li>
+<li>Toys</li></ul>
+
+      </div>
+      <div class="col-sm-3">
+        <ul id="ulfooter"><h6>Contact us</h6>
+<li>Address</li>
+<li>HeadQuaters</li>
+<li>Regional offices</li>
+<li>Service Policy</li>
+<li>Track Order</li>
+<li>Our Partners</li></ul>
+
+      </div>
+ </div>
+ <div class="row" id="copyright">
+  <div class="col-sm-4"></div>
+  <div class="col-sm-4">&copy;copyright E-commerce  @Dobacle North 2023-24</div>
+  <div class="col-sm-4"></div>
+ </div>
+ <!--product description Division on hover
+  This is devision which will slide to the right on the click of the button of in card box-->
+
+ <div id="cartvalue">
+  <button type="button"onclick="cartcut()" class="form-control" style="width:50px; float:right;"><i class="fa-solid fa-circle-xmark"></i></button>
+<div class="heading"style="border-radius:30px">
+<div class="row">
+<div class="col-sm-12" style="text-align:center">
+<br>
+  <div class="row"><!--creation of the card -->
+    <div class="col-sm-4">
+      <img style="border:1px solid black;width: 300px;height:450px;box-shadow: 0 4px 8px 0 rgba(10, 10, 10, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" src="https://img3.junaroad.com/uiproducts/17183348/zoom_0-1596896988.jpg">
+    </div>
+
+    <div class="col-sm-8"><!--creation of the card-->
+      <div class="card" style="border:1px solid black;width:630px; height:450px;box-shadow: 0 4px 8px 0 rgba(10, 10, 10, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)">
+        <div class="card-body">
+        <p class="card-title" id="textonclick"><h3>Gold Print Straight Kurta<i class="fa-solid fa-cart-shopping"></i></h3></p>
+        <i class="fa-solid fa-share-nodes">&nbsp;&nbsp;</i><i class="fa-brands fa-whatsapp">&nbsp;&nbsp</i><i class="fa-solid fa-barcode"></i>
+        <p class="card-text" id="textonclick">Brand Svarchi Flashing Beautifuly</p>
+        <p class="card-text" style="font-family:Georgia"></p>
+        PRODUCT DETAILS
+        look pretty in a kurta from svarchi- flashing beautifuly and get it in red. limeroad has something for everyone.
+        lay your hands on s size kurtas to wear them as casual wear. the best part? these beautiful styles can be taken from work to dinner in a jiffy!
+        swank this kurta in vivid patterns priced at ₹549. limeroad always gives you the hottest styles at the lowest prices.
+        grab this beautiful kurta made up of rayon fabric featuring sweetheart neck designs. 
+      </p>
+
+       
+        <p style="color:green;">M.R.P.	: ₹ 1999<br>
+          Price	: ₹ 589<br>
+          Today's Price	: ₹ 549<br>
+          <button id="buttonindescription" type="button" style="width:300px;margin-top:0px;margin-left: 150px; background-color:white; border:1px solid black; color:black;"class="form-control" onclick="paynow()">Pay Now</button><button type="button" style="width:70px;margin-top:-38px;margin-left: 510px; background-color:red; color:white;"class="form-control"><i class="fa-regular fa-heart"></i></button>
+          </p>
+      </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+</div>
+
+<!--cart box on hover -->
+<!--This is devision which will slide to the right on the click of the button of in card box
+    This devision contain the order summary of the customer -->
+<div id="cartvalue1">
+  <button type="button"onclick="paynowcut()" class="form-control" style="width:50px; float:right;"><i class="fa-solid fa-circle-xmark"></i></button>
+
+    
+    
+    <div class="row">
+      <div class="col-sm-4"><!--creation of the card took place-->
+  <div class="card" style="display:inline-block;box-shadow: 0 4px 8px 0 rgba(10, 10, 10, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border:1px solid black;width:200px; height:400px;margin-top:40px;margin-left:30px;">
+     <img class="card-img-top" style="border:1px solid black;width:200px; height:250px" src="https://img3.junaroad.com/uiproducts/17183348/zoom_0-1596896988.jpg" alt="Image not available">
+     <p class="card-title" style="font-family:Georgia;text-align: center;">Gold Print Straight Kurta</p>
+     <p style="text-align:center;"><i class="fa-solid fa-trash"></i></p>
+     <button type="button" class="form-control" style="cursor:none;background-color:orangered;color: white;">M.R.P Rs-1999/-</button>
+     
+     <button type="button" class="form-control" style="cursor:none;background-color: green;color: white;">Discount Rs-1500/-</button>
+     
+     <button type="button" class="form-control" style="cursor:none;background-image: url(https://media.istockphoto.com/id/1248542684/vector/abstract-blurred-colorful-background.jpg?s=612x612&w=0&k=20&c=6aJX8oyUBsSBZFQUCJDP7KZ1y4vrf-wEH_SJsuq7B5I=);color: white;">Today's price-499/-</button> 
+      </div>
+    </div>
+    
+    <div class="col-sm-8">
+      <div class="card" style="margin-top:40px;width:600px;height:400px;box-shadow: 0 4px 8px 0 rgba(10, 10, 10, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border:1px solid black;">
+      <p class="card-title"  style="font-family:Georgia;text-align: center;">Order Summary</p>
+      <p style="display:inline-block;">Please Select quantity </p><select id="quantity"class="form-control" style="width:300px;display:inline-block;margin-left: 200px;margin-top:-50px;"> 
+        <!--setting up the quantity option on order summary page-->
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+      <br>
+      <!--setting up the size option on order summary page -->
+      <p style="display:inline-block;">Please select your size</p><select value="Please select your size" id="size"class="form-control" style="width:300px;display:inline-block;margin-left: 200px;margin-top:-50px;">
+       
+         <option>small</option>
+         <option>Medium</option>
+         <option>Large</option>
+         <option>Extra Large</option>
+         
+       </select>
+       
+       <br><button class="form-control" type="button" onClick="checkavailebility();" style="border:1px solid black;width:300px;margin-left: 10px;margin-top: 0px;">Click to Check Availability</button>
+       
+       <input type="text" id="available" class="form-control" style="width:200px; color:green; margin-left: 350px;margin-top: -38px;border:1px black solid;" readonly>
+       
+       <br><p style="display:inline-block;">Cost </p><input type="text" class="form-control" id="cost"  style="width:300px;display:inline-block;margin-left: 200px;margin-top:-50px;" readonly>
+    
+       <br><input type="text" class="form-control" id="Deliverycharge" value=" Deliverycharge:Rs-50/-" readonly style="width:300px;display:inline-block;margin-left: 200px">
+  
+       <br> <p style="display:inline-block;">Total Cost</p><input type="text" class="form-control" id="totalcost" style="width:300px;display:inline-block;margin-left: 200px;margin-top:-50px;"readonly>
+  
+       <br>
+   <button class="form-control" type="button" onClick="checkout();" style="background-color:green;color:white;"> Check Out </button>
+      </div>
+    </div>   
+ </div>
+</div>
+
+ <script src="code.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>     
+  </body>
+</html>

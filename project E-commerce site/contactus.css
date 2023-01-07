@@ -1,0 +1,41 @@
+#submitbutton:hover{
+    background-image: url(https://media.istockphoto.com/id/1248542684/vector/abstract-blurred-colorful-background.jpg?s=612x612&w=0&k=20&c=6aJX8oyUBsSBZFQUCJDP7KZ1y4vrf-wEH_SJsuq7B5I=);
+    color:white;
+}
+#contactuspagetablet{
+    display: none;
+}
+#contactuspagemobile{
+    display: none;
+}
+
+
+/*CSS code for small mobile screens */
+@media(max-width:612px) and (min-width:0px)
+
+{
+    #contactuspage{
+        display:none;
+    }
+#contactuspagetablet{
+    display:none;
+}
+#contactuspagemobile{
+    display: grid;
+}
+}
+
+/*CSS code for medium  screens */
+
+@media(max-width:1183px) and (min-width:612px)
+{
+    #contactuspagemobile{
+        display:none;
+    }
+    #contactuspage{
+        display: none;
+    }
+#contactuspagetablet{
+    display:grid;
+}
+}

@@ -1,0 +1,580 @@
+
+/*code to set header width and height*/
+#header1{
+    width:100%;
+    height: 50px;
+   
+    
+}
+/*  code to style the logo of site */
+#header1logo{
+    width:300px;
+    height:40px;
+    border-radius: 20px 20px 20px 20px;
+    border:1px black;
+   margin-top: 5px;
+     margin-left: 65px;
+}
+/* code to style the search box of the site   */
+#searchbox{
+   width:60%;
+    display:inline-block;
+    border-radius: 30px 0px 0px 30px;
+   margin-left: 10rem;
+   margin-top: 5px;
+    
+}
+
+#buttonsearch{
+    margin-top: -6px;
+    margin-left: -5px;
+    width:10%;
+    background-color:black ;
+    display:inline-block;
+    border-radius: 0px 30px 30px 0px;
+    background-image:url(https://media.istockphoto.com/id/1248542684/vector/abstract-blurred-colorful-background.jpg?s=612x612&w=0&k=20&c=6aJX8oyUBsSBZFQUCJDP7KZ1y4vrf-wEH_SJsuq7B5I=);
+}
+/* code for the search box in small mobile screen   */
+#searchboxintoggle{
+  
+    width:70%;
+      display:inline-block;
+      border-radius: 30px 0px 0px 30px;
+     margin-left: 0rem;
+     margin-top: 5px;
+      
+  }
+  #cartintoggle{
+    padding-top:5px;
+   display: inline-block;
+   list-style-type: none;
+     
+ }
+#buttonsearchintoggle{
+   margin-top: -3px;
+    width:20%;
+    background-color:black ;
+    display:inline-block;
+    border-radius: 0px 30px 30px 0px;
+}
+#cartbuttontoggle{
+  padding-left: -0px;
+  width:100%;
+}
+#cartbuttontoggle:hover{
+    background-image: url(https://media.istockphoto.com/id/1248542684/vector/abstract-blurred-colorful-background.jpg?s=612x612&w=0&k=20&c=6aJX8oyUBsSBZFQUCJDP7KZ1y4vrf-wEH_SJsuq7B5I=);
+color: white;
+}
+/* code for the cart styling in big screen  */
+#cart{
+   padding-top: 5px;
+  display: inline-block;
+  list-style-type: none;
+    
+}
+
+
+/* pseudo class hover is used    */
+#cartbutton:hover{
+    background-image:url(https://media.istockphoto.com/id/1248542684/vector/abstract-blurred-colorful-background.jpg?s=612x612&w=0&k=20&c=6aJX8oyUBsSBZFQUCJDP7KZ1y4vrf-wEH_SJsuq7B5I=);
+color:white;
+}
+
+#carttext{
+    display:inline-block;
+}
+#carttexttoggle{
+    display:inline-block;
+}
+
+#loginbutton{
+    margin-top:5px;
+    margin-left: -30px;
+    background-image: url(https://media.istockphoto.com/id/1248542684/vector/abstract-blurred-colorful-background.jpg?s=612x612&w=0&k=20&c=6aJX8oyUBsSBZFQUCJDP7KZ1y4vrf-wEH_SJsuq7B5I=);
+}
+.selector-for-some-widget {
+    box-sizing: content-box;
+  }
+  #anchor{
+    background-image: url(https://media.istockphoto.com/id/1248542684/vector/abstract-blurred-colorful-background.jpg?s=612x612&w=0&k=20&c=6aJX8oyUBsSBZFQUCJDP7KZ1y4vrf-wEH_SJsuq7B5I=);
+  text-align: center;
+  color:white;
+  }
+  #navigation{
+    background-color:rgb(248, 237, 237);
+  }
+  #navigation1{
+    
+    font-family:Georgia;
+    text-align: center;
+    color:black;
+  width:100%
+  }
+p{
+  font-family: Georgia;
+}
+ .row ul li a{
+    color:black;
+  }
+ 
+  .row ul li a:hover{
+    text-decoration:underline;
+    color:white;
+    text-decoration: none;
+    background-image: url(https://media.istockphoto.com/id/1248542684/vector/abstract-blurred-colorful-background.jpg?s=612x612&w=0&k=20&c=6aJX8oyUBsSBZFQUCJDP7KZ1y4vrf-wEH_SJsuq7B5I=);
+    
+  }
+  /* backgound image property is used here  */
+  .row ul li a:active{
+    background-image: url(https://media.istockphoto.com/id/1248542684/vector/abstract-blurred-colorful-background.jpg?s=612x612&w=0&k=20&c=6aJX8oyUBsSBZFQUCJDP7KZ1y4vrf-wEH_SJsuq7B5I=);
+  }
+  .row ul li a:after{
+    background-image: url(https://media.istockphoto.com/id/1248542684/vector/abstract-blurred-colorful-background.jpg?s=612x612&w=0&k=20&c=6aJX8oyUBsSBZFQUCJDP7KZ1y4vrf-wEH_SJsuq7B5I=);
+  }
+  #showheader1and2smallscreen{
+    display: none;
+  }
+    /* display property is used here  */
+  #loginbuttontoggle{
+    margin-left:0px;
+  }
+  #togglebar{
+    
+    margin-top:-46px;
+    width:80px;
+    height: 80px;
+    display:none;
+  }
+  #slidebox{
+    margin-top: 3px;
+    height: 500px;
+  }
+  #cardimg
+  {
+    width:198px;
+    height:250px;
+  }
+  #cardbutton{
+    width:100%;
+    background-color:white;
+    color:black;
+    border: 1px solid black;
+   }
+   #cardbutton:hover{
+    background-image: url(https://media.istockphoto.com/id/1248542684/vector/abstract-blurred-colorful-background.jpg?s=612x612&w=0&k=20&c=6aJX8oyUBsSBZFQUCJDP7KZ1y4vrf-wEH_SJsuq7B5I=);;
+  color: white; 
+  }
+   #cardtitle{
+    text-align: center;
+    font-family: Georgia;
+   }
+     /* Font family Georgia is used here to make text look good  */
+   #card1{
+  width:220px;
+   
+    box-shadow: 10px 10px 18px #888888;
+   }
+   #cardrow{
+    float:center;
+   }
+   #cardbox{
+    border: 1px solid black;
+   }
+   #cardbox:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   }
+   #slideshowbox1{
+    background-color: rgb(239, 228, 250);
+   }
+  #prev{margin-left: -30px;
+    width: 40px;
+    height: 60px;
+    background-color: black;
+    border-radius: 30px;}
+  #next{margin-left: -20px;
+    width: 40px;
+    height: 60px;
+    background-color: black;
+    border-radius: 30px;
+  }
+  #slidshowbackground{
+    background-color:whitesmoke;
+    width:100%;
+  }
+   /*  Display :none => hide the component from the screen  */
+  #featuredboxmobile{
+    display:none;
+  }
+  /*  Display :none => hide the component from the screen  */
+  #prevmobile{
+    display:none;
+  }
+  /*  Display :none => hide the component from the screen  */
+  #nextmobile{
+    display:none;
+  }
+  /*  Display :none => hide the component from the screen  */
+  #mobprev{
+    display: none;
+  }
+  /*  Display :none => hide the component from the screen  */
+  #mobnext{
+    display: none;
+  }
+  /*  Display :none => hide the component from the screen  */
+  #ulfooter
+  {
+    list-style: none;
+  }
+  #ulfooter li{
+font-family: Georgia;
+  }
+  #copyright{
+    background-color: black;
+    margin-top: 1px;
+    text-align: center;
+    color: white;
+  }
+  #buttonarrival:hover{
+    color:white;
+    background-image: url(https://media.istockphoto.com/id/1248542684/vector/abstract-blurred-colorful-background.jpg?s=612x612&w=0&k=20&c=6aJX8oyUBsSBZFQUCJDP7KZ1y4vrf-wEH_SJsuq7B5I=);
+  }
+  #cartvalue{
+    margin-left: -1000px;
+    position:fixed;
+    top:50px;
+    
+    width:1000px;
+    height:500px;
+    background-color:white;
+    z-index: 2;
+    box-shadow: 0 4px 8px 0 rgba(10, 10, 10, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 20px;
+    border:1px solid black;
+  }
+  #textonclick{
+text-align: center;
+font-family: Georgia;
+  }
+ #buttonindescription:hover{
+  background-image: url(https://media.istockphoto.com/id/1248542684/vector/abstract-blurred-colorful-background.jpg?s=612x612&w=0&k=20&c=6aJX8oyUBsSBZFQUCJDP7KZ1y4vrf-wEH_SJsuq7B5I=);
+ }
+ #cartvalue1{
+  margin-left: -1300px;
+    position:fixed;
+    top:50px;
+    
+    width:1000px;
+    height:500px;
+    background-color:white;
+    z-index: 3;
+    box-shadow: 0 4px 8px 0 rgba(10, 10, 10, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 20px;
+    border:1px solid black;
+ }
+ #sponsermobile{
+  display:none;
+ }
+ /*  Display :none => hide the component from the screen  */
+ #cartvaluemobile{
+  display: none;
+ }
+ /*  Display :none => hide the component from the screen  */
+ #cartvalue1mobile{
+  display: none;
+ }
+ /*  Display :none => hide the component from the screen  */
+ #cross{
+  display:non;
+}
+/*  Display :none => hide the component from the screen  */
+#cross1{
+  display:non;
+}
+/*  Display :none => hide the component from the screen  */
+#buttonindescription:hover{
+  color:white;
+}
+#navigation3{
+  display:none;
+}/*  Display :none => hide the component from the screen  */
+#sponserboxcards{
+  display:none;
+}
+/*  Display :none => hide the component from the screen  */
+#inbetweenslidemobile
+{
+  display: none;
+}
+/*  Display :none => hide the component from the screen  */
+#togglebartablet{
+  display:none;
+}
+/*  Display :none => hide the component from the screen  */
+#tabletview{
+  display:none;
+}
+/*  Display :none => hide the component from the screen  */
+#navigation4{
+  display:none;
+}
+/*  Display :none => hide the component from the screen  */
+
+
+/*Below Css code is for the mobile  size screens*/
+
+  @media(max-width:612px) and (min-width:0px){
+   #hideheader1and2{
+    display:none;
+   }
+   #navigation4{
+    display:none;
+   }
+   #newarrivaldivbox{
+    display:none;
+   }
+   #togglebar{
+    display:grid;
+   }
+  #navigation{
+    display:none;
+  }
+  #navigation1{
+    margin-top: 0px;;
+  }
+   #headernav{
+    width:100%;
+   }
+#featuredbox{
+  display: none;
+}
+#prev{margin-left: -30px;
+  width: 40px;
+  height: 60px;
+  background-color: black;
+  display:none;
+}
+#next{margin-left: -20px;
+  width: 40px;
+  height: 60px;
+  background-color: black;
+  display:none;
+}
+
+#featuredboxmobile{
+  display:grid;
+  background-color: white;
+}
+#cardbox{
+  margin-top: 10px;
+  margin-left: 110px;
+}
+#mobprev{
+  display: grid;
+  background-color:grey;
+   border-radius:30px;
+}
+#mobnext{
+  display: grid;
+  background-color:grey; 
+  border-radius:30px;
+}
+#sponsermobile{
+  background-color: aqua;
+  display:grid;
+ }
+ #cartvalue{
+  display:none }
+  #cartvalue1{
+    display:none;
+  }
+  #cartvaluemobilepayment{
+    position:fixed;
+    top:10px;
+    width:350px;
+    height:660px; 
+    background-color:white;
+    margin-left: -400px;
+    box-shadow: 0 4px 8px 0 rgba(10, 10, 10, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border:1px solid black;
+    display: grid;
+    z-index: 3;
+  }
+  /* Overflow property is used here so that user easily scroll the devision to access the data    */
+   #cartvaluemobile{
+    overflow: scroll;
+    position:fixed;
+    top:10px;
+    margin-top: 10px;
+margin-left: -400px;
+    width:350px;
+    height:660px;
+    background-color:white;
+    display: grid;
+    z-index: 2;
+    box-shadow: 0 4px 8px 0 rgba(10, 10, 10, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      /*   shadow os created here with help of Box-shadow propert */
+    border:1px solid black;
+  }
+ #buttonmobiledescription{
+  background-color: white;
+  color:black;
+  border: 1px solid black;
+ }
+ #buttonmobiledescription:hover{
+  background-image:url(https://media.istockphoto.com/id/1248542684/vector/abstract-blurred-colorful-background.jpg?s=612x612&w=0&k=20&c=6aJX8oyUBsSBZFQUCJDP7KZ1y4vrf-wEH_SJsuq7B5I=);
+color:white; 
+}
+#cross{
+  display:grid;
+}
+#dropdownbox:hover{
+  background-color:white;
+
+}
+#navigation2{
+  display:none;
+}
+#inbetweenslide{
+  display:none;
+}
+#navigation3{
+  display: grid;
+}
+#sponserboxcards{
+  display:grid;
+  width:385px;
+  height:600px;
+  background-color:white;
+}
+#inbetweenslidemobile{
+  display:grid;
+}
+#togglebartablet{
+  display:none;
+}
+#featuredboxtablet{
+  display:none;
+}
+#nextnewarrivaltablet{
+  display: none;
+}
+  }
+/*  CSS code for the mobile screen end here  */
+  /* Css code */
+
+  #prevnewarrivaltablet{
+    display: none;
+  }
+
+
+
+#tabletrow
+{
+  display:none;
+}
+#featuredboxtablet
+{
+  display:none;
+}
+#newarrivaldivboxtablet
+{
+  display:none;
+}
+
+#prevnewarrivaltablet{
+  display:none;
+}
+#nextnewarrivaltablet{
+  display:none;
+}
+
+
+/*Below Css code is for the tablet (medium) size screens*/
+  @media(max-width:1298px) and (min-width:612px) 
+  {
+    #featuredboxtablet{
+      display:grid;
+    }
+    #togglebartablet{
+      display:grid;
+    
+    }
+    #featuredbox{
+      display: none;
+    }
+    #tabletrow{
+      display:grid;
+    }
+    .searchbox{
+      display:none;
+    }
+    #searchbox1{
+      width:60%;
+       display:inline-block;
+       border-radius: 30px 0px 0px 30px;
+      margin-left: 10rem;
+      margin-top: 5px;
+      display:grid;
+  }
+  #navigation4{
+    display:grid;
+  }
+  #cartbutton{
+    display:none;
+  }
+  #loginbutton{
+    display:none;
+  }
+  #prev
+  {
+    display: none;
+  }
+  #next{
+    display:none;
+  }
+  #tabletview{
+    display:grid;
+  }
+  #cartvaluemobile{
+    overflow: scroll;
+    position:fixed;
+    top:10px;
+    margin-top: 10px;
+margin-left: -400px;
+    width:350px;
+    height:660px;
+    background-color:white;
+    display: grid;
+    z-index: 2;
+    box-shadow: 0 4px 8px 0 rgba(10, 10, 10, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border:1px solid black;
+    display: grid;
+  }
+  #cartvaluemobilepayment{
+    position:fixed;
+    top:10px;
+    width:350px;
+    height:660px; 
+    background-color:white;
+    margin-left: -400px;
+    box-shadow: 0 4px 8px 0 rgba(10, 10, 10, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border:1px solid black;
+    display: grid;
+    z-index: 3;
+    display:grid;
+  }
+  #newarrivaldivbox{
+    display:none;
+  } 
+  #navigation2{
+    display:none;
+  }
+  #newarrivaldivboxtablet{
+    display:grid;}
+   }
+
+   /*  CSS code for the Tablet screen end here  */
+   #ulfooter h6{
+    text-decoration: underline;
+   }
